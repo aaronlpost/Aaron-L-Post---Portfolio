@@ -4,3 +4,7 @@ _cache/*
 _config/users/admin.yaml
 _config/add-ons/*
 _add-ons/*
+
+*.jpg
+
+*.png
