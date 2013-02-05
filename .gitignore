@@ -1,0 +1,6 @@
+.DS_Store
+_cache/*
+.htaccess
+_config/users/admin.yaml
+_config/add-ons/*
+_add-ons/*

@@ -1,0 +1,29 @@
+
+        <article class="clearfix">
+        	<div class="herowrap">
+        		<img src="{{_site_root}}assets/img/{{ image }}.jpg" class="article-image lightSwitcher">
+        		{{ if prev }}
+        		{{ entries:listing folder="portfolio" conditions="url:{prev}" }}
+        		<a href="{{ prev }}" class="prev">&larr; Previous</a>
+        		{{ /entries:listing }}
+        		{{ endif }}
+        		<a href="#" class="full lightSwitcher" title="{{ title }}">Fullscreen &uarr;</a>
+        		{{ if next }}
+        		{{ entries:listing folder="portfolio" conditions="url:{next}" }}
+        		<a href="{{ next }}" class="next">Next &rarr;</a>
+        		{{ /entries:listing }}
+        		{{ endif }}
+        		</div>
+        	<header>
+        		<h2 class="title">{{ title }}</h2>
+				<div class="meta">
+					{{ if date }}<time datetime="2012-10-25" pubdate>{{ datestamp format="F j, Y" }}</time><br>{{ endif }}
+					{{ if location }}<a href="#" class="location">{{ location }}</a>{{ endif }}
+				</div><!-- meta -->
+        	</header>
+        	
+        	{{ content }}
+        	
+        </article>
+
+       

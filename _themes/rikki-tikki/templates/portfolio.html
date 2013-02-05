@@ -1,0 +1,24 @@
+        <header class="desc-header">  
+            <hr>
+        	<h1 class="page-title">{{ title }}</h1>
+        	<p class="blurb">{{ content }}</p>
+        </header>
+        <article class="clearfix">
+        	<ul class="gallery-home">
+	        {{ entries:listing folder="portfolio" }}
+	        	
+	        	{{ if featured_image == "yes" }}
+        	   	<li class="gallery-featured">
+        	   	{{ else }}
+        	   	<li>
+        	   	{{ endif }}
+        	   	<figure>
+        	   		<a href="{{ url }}"><img src="../assets/img/{{ image }}.jpg"></a>
+        	   		<figcaption>
+	        	   		{{ title }}
+	           		</figcaption>
+				</figure>
+				</li>
+	        {{ /entries:listing }}
+        	</ul>
+        </article>

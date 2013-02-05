@@ -1,0 +1,41 @@
+   		{{ entries:listing folder="journal" limit="5" }}
+        {{ if featured == "yes" }}
+        <article class="clearfix">
+            <img src="{{_site_root}}assets/img/{{ image }}.jpg" class="article-image">
+        	<header>
+        		<h2 class="title"><a href="{{ url }}">{{ title }}</a></h2>
+				<div class="meta">
+					{{ if date }}<time datetime="2012-10-25" pubdate>{{ datestamp format="F j, Y" }}</time>{{ endif }}
+					{{ if location }}<a href="#" class="location">{{ location }}</a>{{ endif }}
+				</div><!-- meta -->
+        	</header>
+        {{ else }}
+        <article class="clearfix brief">
+        	<header>
+        		<h2 class="title"><a href="{{ url }}">{{ title }}</a></h2>
+				<div class="meta">
+					{{ if date }}<time datetime="2012-10-25" pubdate>{{ datestamp format="F j, Y" }}</time>{{ endif }}
+					{{ if location }}<a href="#" class="location">{{ location }}</a>{{ endif }}
+				</div><!-- meta -->
+        	</header>
+        	<p>
+        	<img src="{{_site_root}}assets/img/{{ image }}.jpg" class="small-image">
+        	</p>
+         {{ endif }}
+
+        	{{ content }}
+        	
+        </article>
+
+        {{ /entries:listing }}
+
+        {{ entries:pagination folder="journal" limit="5"}}
+        	<nav id="pagination" class="clearfix">
+        	{{ if previous_page }}
+        		<a href="{{ previous_page }}" class="newer">Newer Entries &rarr;</a>
+        	{{ endif }}
+        	{{ if next_page }}
+        		<a href="{{ next_page }}" class="older">&larr; Older Entries</a>
+        	{{ endif }}
+        	</nav>
+        {{ /entries:pagination }}
