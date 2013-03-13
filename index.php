@@ -1,68 +1,65 @@
 <?php
-/**
- * Statamic
- * 
- * Statamic is a light-weight and flexible, file-based 
- * publishing engine, build for devs AND clients.
- *
- * @author Jack McDade (jack@statamic.com)
- * @author Mubasher Iqbal (mubs@statamic.com)
- * @copyright 2012 Statamic
- */
 
-##################################################
-# To run Statamic above webroot, uncomment the 
-# following line. Make sure to update your
-# public folder setting in your site config.
+/*
+|--------------------------------------------------------------------------
+| Statamic
+|--------------------------------------------------------------------------
+|
+| Statamic is a flat-file, dynamic, and highly flexible publishing
+| engine, built for developers, designers, and clients alike.
+|
+| @author Jack McDade (jack@statamic.com)
+| @author Mubasher Iqbal (mubs@statamic.com)
+| @author Fred LeBlanc (fred@statamic.com)
+| @copyright 2013 Statamic
+|
+*/
 
-# chdir('..');
+/*
+|--------------------------------------------------------------------------
+| Web Root
+|--------------------------------------------------------------------------
+|
+| Lots of file level activities enjoy knowing right where web root is.
+|
+*/
 
-# #################################################
+const BASE_PATH = __DIR__;
 
-# Fire up Slim...
-require '_app/vendor/Slim/Slim.php';
-\Slim\Slim::registerAutoloader();
+/*
+|--------------------------------------------------------------------------
+| Running Above Web Root
+|--------------------------------------------------------------------------
+|
+| To run Statamic above webroot, uncomment the following line. Make sure
+| to update the public folder setting in your site config.
+|
+*/
 
-# Get our stuff cooking...
-require '_app/statamic/helper.php';
-require '_app/statamic/plugin.php';
-require '_app/statamic/statamic.php';
-require '_app/statamic/view.php';
-require '_app/statamic/auth.php';
-require '_app/statamic/user.php';
+// chdir('..');
 
-# Third party bacon starts to sizzle...
-require '_app/vendor/Lex/Autoloader.php';
-require '_app/vendor/Yaml/spyc.php';
 
-# The sultry smoke of initialization rises...
-$config = Statamic::load_all_configs();
+/*
+|--------------------------------------------------------------------------
+| Autoloader
+|--------------------------------------------------------------------------
+|
+| "Autoload" the application dependencies and libraries
+|
+*/
 
-$public_path = isset($config['_public_path']) ? $config['_public_path'] : '';
+require_once BASE_PATH . '/_app/autoload.php';
 
-$config['theme_path'] = '_themes/'.$config['_theme']."/";
-$config['templates.path'] = Statamic_helper::reduce_double_slashes($public_path.'_themes/'.$config['_theme']."/");
-$config['debug'] = $config['_debug'];
-$config['view'] = new Statamic_View();
+/*
+|--------------------------------------------------------------------------
+| Start the Engine
+|--------------------------------------------------------------------------
+|
+| All the heavy initilization and configuration happens right here.
+| Let's get going!
+|
+*/
 
-# The meat hits the skillet...
-$app = new \Slim\Slim($config);
-$app->config = $config;
+$app = require_once BASE_PATH . '/_app/start.php';
 
-# Loading the Markup languages
-if (Statamic::get_setting('_content_type', false) == 'markdown_edge') {
-
-  # Experimental Markup Features
-  # including classes on all headers & attributes on fenced code blocks
-  require '_app/vendor/Markup/markdown_edge.php';
-} else {
-  require '_app/vendor/Markup/markdown.php';
-}
-
-require '_app/vendor/Markup/smartypants.php';
-require '_app/vendor/Markup/classTextile.php';
-
-Statamic_View::set_layout("layouts/default");
-require '_app/_routes.php';
-
-$app->run(); # Breakfast is served.
+$app->run();

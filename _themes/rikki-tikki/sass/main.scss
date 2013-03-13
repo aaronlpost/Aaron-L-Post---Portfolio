@@ -162,15 +162,16 @@ textarea {
 	
 	figcaption {
 		font-family: "Sorts Mill Goudy", serif;	
-		font-size: 1.5em;
+		font-size: .9em;
 		font-weight: normal;
+		text-align: center;
 	}
 	
 	.gallery-featured {
 		font-size: 2em;
 	}
 	
-/* Header
+/* !Header
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 	header h1 a {
     	display:block;
@@ -215,22 +216,82 @@ textarea {
 	    display:inline;
     }
     
-	header h1#logo {
-	    width:123px; height:75px;
-	    background:url("../img/logom.gif") no-repeat 0 0;
-	    text-indent:-9999px;
+	.hide-text {
+		text-indent: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+ 
+	#logo {
+	    width:126px; height:76px;
+	    background:url("../img/logo2.svg") no-repeat 0 0;
+	    background-size: 126px 154px;
 	    position:relative;
 	    top:0;
 	    left:8.5%;
-	    overflow:hidden;
 	    float: left;
 	    margin: 0 !important;
     }
     
+/*
 	header h1#logo:hover, header h1#logo:active {
-	    background:url("../img/logom.gif") no-repeat 0 -75px;
+	    background:url("../img/logo2.svg") no-repeat 0 -77px;
     }
-	
+*/
+    
+    #logo span {
+		position: absolute;
+		top: 0; left: 0; bottom: 0; right: 0;
+	    width:126px; height:76px;
+	    background:url("../img/logo2.svg") no-repeat 0 -77px;
+	    background-size: 126px 154px;
+	    opacity: 0;
+	    animation: fadeout ease-in 4s;
+	    -moz-animation: fadeout ease-in 4s;
+	    -webkit-animation: fadeout ease-in 4s;
+	    -o-animation: fadeout ease-in 4s;
+		-webkit-transition: opacity ease-in 0.5s;
+		-moz-transition:    opacity ease-in 0.5s;
+		-o-transition:      opacity ease-in 0.5s;
+	}
+
+    #logo span:hover {
+		opacity: 1;	
+    }
+    
+	@keyframes fadeout {
+	    from {
+	        opacity:1;
+	    }
+	    to {
+	        opacity:0;
+	    }
+	}
+	@-moz-keyframes fadeout { /* Firefox */
+	    from {
+	        opacity:1;
+	    }
+	    to {
+	        opacity:0;
+	    }
+	}
+	@-webkit-keyframes fadeout { /* Safari and Chrome */
+	    from {
+	        opacity:1;
+	    }
+	    to {
+	        opacity:0;
+	    }
+	}
+	@-o-keyframes fadeout { /* Opera */
+	    from {
+	        opacity:1;
+	    }
+	    to {
+	        opacity: 0;
+	    }
+	}
+		
 /* !Article
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   */
 	.article-image {
@@ -248,7 +309,7 @@ textarea {
 		margin-left: 8.5%;
 	}
 	
-	article p {
+	article p, article figure {
 		float: right;
 		width: 50%;
 		margin-bottom: 1.5em;
@@ -278,6 +339,10 @@ textarea {
 		margin-left: 8.5%;
 		margin-right: 8.5%;
 		margin-bottom: 2.5em;
+	}
+	
+	figure img {
+		margin-bottom: 1.5em;
 	}
 	
 /* !Brief
@@ -355,6 +420,7 @@ textarea {
 		z-index:100;
 		}
 	
+/*
 	figure {
 		display:block;
 		position:relative;
@@ -377,6 +443,7 @@ textarea {
 		opacity:1;
 		left:0;
 		}
+*/
 	
 /* !Footer
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   */
@@ -545,7 +612,7 @@ textarea {
 	    font-size: 1.2em;
     }
     
-    article header, article p {
+    article header, article p, article figure {
 	  	width: 70%;
 	  	margin-right: 15%;
 	  	margin-left: 15%;
@@ -586,7 +653,7 @@ textarea {
 	  	margin: 0;
   	}
   	    
-    article header, article p {
+    article header, article p, article figure {
 	  	width: 82%;
 	  	margin-right: 9%;
 	  	margin-left: 9%;	
@@ -629,12 +696,6 @@ textarea {
 		margin: .75em;
 	}
 	
-	figcaption {
-		opacity: 0;
-		font-size: .8em;
-		left: 0;
-	}
-	
 	article {
 		padding-bottom: 1em;
 	}
@@ -647,8 +708,16 @@ textarea {
 	    font-size: 1em;
     }
   	 
-  	header h1#logo {
+  	#logo {
 	  	left: 42%;
+	    width:63px; height:38px;
+	    background-size: 63px 77px;
+  	}
+  	
+  	#logo span {
+	    width:63px; height:38px;
+	    background:url("../img/logo2.svg") no-repeat 0 -38px;
+	    background-size: 63px 77px;
   	}
 
 	h2 {
@@ -658,13 +727,6 @@ textarea {
 }
 
 
-
-
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-       only screen and (min-resolution: 144dpi) {
-    /* Style adjustments for high resolution devices */
-}
-
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
 	#nav a{
   		display: inline-block;
@@ -672,6 +734,7 @@ textarea {
   		margin: 0;
   	}
   	
+/*
   	header h1#logo {
 	  	left: 43%;
 	  	background:url("../img/logom.gif") no-repeat 0 0;
@@ -685,6 +748,7 @@ textarea {
   	header h1#logo:hover, header h1#logo:active {
 	    background:url("../img/logom.gif") no-repeat 0 -37px;
     }
+*/
 
   	  
 }
