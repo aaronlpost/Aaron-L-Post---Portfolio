@@ -9,6 +9,11 @@
 @import 'normalize';
 @import 'bourbon';
 
+@mixin font-size($sizeValue: 1.8){
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -21,9 +26,9 @@ textarea {
     color: #222;
 }
 
+html {font-size: 112.5%; }
+
 body {
-    font-size: 1.2em;
-    line-height: 1;
     background-color: #141414;
     font-weight: normal;
 }
@@ -136,14 +141,13 @@ textarea {
 
 	p {
 		font-family: "Vollkorn", serif;
-		font-size: 1em;
 		line-height: 1.5;
 		margin-top: 0;
 	}
 	
 	h1.page-title {
 		font-family: "Sorts Mill Goudy", serif;	
-		font-size: 3.4em;
+		@include font-size(2.6);
 		margin: .75em 0 .45em 0;
 		text-shadow: 1px 1px 0 #fff;
 		text-align: center;
@@ -152,7 +156,7 @@ textarea {
 	
 	h2 {
 		font-family: "Sorts Mill Goudy", serif;	
-		font-size: 3.4em;
+		@include font-size(2.6);
 		line-height: .9;
 		margin-bottom: .45em;
 		text-shadow: 1px 1px 0 #fff;
@@ -162,7 +166,7 @@ textarea {
 	
 	figcaption {
 		font-family: "Sorts Mill Goudy", serif;	
-		font-size: .9em;
+		@include font-size(.9);
 		font-weight: normal;
 		text-align: center;
 	}
@@ -203,7 +207,7 @@ textarea {
 
     nav ul li a {
 	    display:inline-block;
-	    font-size:1em;
+		@include font-size(1);
 	    text-shadow:0 1px 0 #fff;  
 	    padding-top:2.8em;
 	    padding-bottom:2.5em;
@@ -324,7 +328,7 @@ textarea {
 	
 	.meta {
 		font-family: "Vollkorn", serif;
-		font-size: .8em;
+		@include font-size(.8);
 		line-height: 1.875;
 		text-transform: uppercase;
 		letter-spacing: .15em;
@@ -390,7 +394,8 @@ textarea {
 	
 	.prev, .full, .next {
 	    font-family: 'Vollkorn', Georgia, serif;
-	    font-size:.75em; text-transform:uppercase; letter-spacing:0.2em;	
+	    @include font-size(.9);
+	    text-transform:uppercase; letter-spacing:0.2em;	
 	    padding: 15px 0;
 		position:absolute;
 		bottom:3em;
@@ -449,7 +454,7 @@ textarea {
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   */
 	#pagination {
 		font-family: "Sorts Mill Goudy", serif;	
-		font-size: 1.5em;
+		@include font-size(1.6);
 		font-weight: normal;
 		padding-top: 1.5em;
 		padding-bottom: 1.5em;
