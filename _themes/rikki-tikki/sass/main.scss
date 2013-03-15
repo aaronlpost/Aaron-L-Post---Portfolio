@@ -15,8 +15,8 @@
 }
 
 @mixin breakpoint($point) {
-  @if $point == medium-desk {
-    @media (max-width: 78em) { @content; }
+  @if $point == large-desk {
+    @media (min-width: 79.125em) { @content; }
   }
   @else if $point == small-desk {
     @media (max-width: 1250px) { @content; }
@@ -40,10 +40,9 @@ textarea {
     color: #222;
 }
 
-html {font-size: 112.5%; }
-
 body {
-  	@include breakpoint(medium-desk) { color: red !important; }
+	font-size: 100%;
+    @include breakpoint(large-desk) { color: red !important; }
     background-color: #141414;
     font-weight: normal;
 }
@@ -121,11 +120,10 @@ textarea {
 /* !Global
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   */
 	.wrapper {
-		width: 1266px;
-		margin: 18px auto; 
-		background-color:rgb(242,242,242); 
-		@include box-shadow(0 0 15px rgba(0,0,0,0.7));            
-		border-radius:8px;
+		width: 100%;
+		background-color:rgb(242,242,242);
+		@include breakpoint(large-desk) {width:79.125em; border-radius:8px; @include box-shadow(0 0 15px rgba(0,0,0,0.7));}
+		margin: 18px auto;             
 	}
 
 	img {
@@ -155,14 +153,14 @@ textarea {
 	}
 
 	p {
+		font-size: 1.125em;
 		font-family: "Vollkorn", serif;
-		line-height: 1.5;
+		line-height: 1.55;
 		margin-top: 0;
 	}
 	
 	h1.page-title {
 		font-family: "Sorts Mill Goudy", serif;	
-		@include font-size(2.6);
 		margin: .75em 0 .45em 0;
 		text-shadow: 1px 1px 0 #fff;
 		text-align: center;
@@ -171,7 +169,7 @@ textarea {
 	
 	h2 {
 		font-family: "Sorts Mill Goudy", serif;	
-		@include font-size(2.6);
+		font-size: 2.95em;
 		line-height: .9;
 		margin-bottom: .45em;
 		text-shadow: 1px 1px 0 #fff;
@@ -222,7 +220,7 @@ textarea {
 
     nav ul li a {
 	    display:inline-block;
-		@include font-size(1);
+		font-size: 1.125em;
 	    text-shadow:0 1px 0 #fff;  
 	    padding-top:2.8em;
 	    padding-bottom:2.5em;
@@ -331,7 +329,7 @@ textarea {
 	article p, article figure {
 		float: right;
 		width: 50%;
-		margin-bottom: 1.5em;
+		margin-bottom: 1.55em;
 		margin-right: 8.5%;
 	}
 	
@@ -343,7 +341,7 @@ textarea {
 	
 	.meta {
 		font-family: "Vollkorn", serif;
-		@include font-size(.8);
+		font-size: .8em;
 		line-height: 1.875;
 		text-transform: uppercase;
 		letter-spacing: .15em;
@@ -611,8 +609,8 @@ textarea {
    Modify as content requires.
    ========================================================================== */
 
+/*
 @media only screen and (max-width: 1260px) {
-    /* Style adjustments for viewports that meet the condition */
     .wrapper {
 		width: 100%;
 	}
@@ -625,9 +623,10 @@ textarea {
 	    width: 33.33%;
     }
 }
+*/
 
+/*
 @media only screen and (max-width: 1100px) {
-    /* Style adjustments for viewports that meet the condition */
     body {
 	    font-size: 1.2em;
     }
@@ -644,9 +643,10 @@ textarea {
 		font-size: 3em;
 	}
 }
+*/
 
+/*
 @media only screen and (max-width: 880px) {
-    /* Style adjustments for viewports that meet the condition */
     body {
 	    font-size: 1.1em;
     }
@@ -690,6 +690,7 @@ textarea {
     article header {
 	    margin-top: 0;
     }
+*/
     
 /*
 	.article-image {
@@ -697,6 +698,7 @@ textarea {
 	}
 */
 	
+/*
 	.meta {
 		margin-bottom:  1em;
 	}
@@ -721,9 +723,10 @@ textarea {
 	}
 	
 }
+*/
 
+/*
 @media only screen and (max-width: 700px) {
-    /* Style adjustments for viewports that meet the condition */
     body {
 	    font-size: 1em;
     }
@@ -745,14 +748,17 @@ textarea {
 	}
 
 }
+*/
 
 
+/*
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
 	#nav a{
   		display: inline-block;
   		padding: 15px 20px;
   		margin: 0;
   	}
+*/
   	
 /*
   	header h1#logo {
@@ -768,10 +774,10 @@ textarea {
   	header h1#logo:hover, header h1#logo:active {
 	    background:url("../img/logom.gif") no-repeat 0 -37px;
     }
-*/
 
   	  
-}
+} */
+
 
 /* ==========================================================================
    Print styles.
