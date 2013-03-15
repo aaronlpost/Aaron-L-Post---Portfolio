@@ -14,6 +14,20 @@
   font-size: $sizeValue + rem;
 }
 
+@mixin breakpoint($point) {
+  @if $point == medium-desk {
+    @media (max-width: 78em) { @content; }
+  }
+  @else if $point == small-desk {
+    @media (max-width: 1250px) { @content; }
+  }
+  @else if $point == tablet {
+    @media (max-width: 650px)  { @content; }
+  }
+  @else if $point == mobile {
+    @media (max-width: 650px)  { @content; }
+  }
+}
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -29,6 +43,7 @@ textarea {
 html {font-size: 112.5%; }
 
 body {
+  	@include breakpoint(medium-desk) { color: red !important; }
     background-color: #141414;
     font-weight: normal;
 }
