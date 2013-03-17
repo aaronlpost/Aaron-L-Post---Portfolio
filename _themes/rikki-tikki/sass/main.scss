@@ -19,13 +19,13 @@
     @media (min-width: 79.125em) { @content; }
   }
   @else if $point == small-desk {
-    @media (max-width: 1250px) { @content; }
+    @media (max-width: 68em) { @content; }
   }
   @else if $point == tablet {
-    @media (max-width: 650px)  { @content; }
+    @media (max-width: 55em)  { @content; }
   }
   @else if $point == mobile {
-    @media (max-width: 650px)  { @content; }
+    @media (max-width: 44em)  { @content; }
   }
 }
 /* ==========================================================================
@@ -42,7 +42,10 @@ textarea {
 
 body {
 	font-size: 100%;
-    @include breakpoint(large-desk) { color: red !important; }
+    @include breakpoint(large-desk) {font-size: 110%; }
+    @include breakpoint(small-desk) {font-size: 110%; }
+    @include breakpoint(tablet) {font-size: 100%; }
+    @include breakpoint(mobile) {font-size: 90%; }
     background-color: #141414;
     font-weight: normal;
 }
@@ -122,8 +125,9 @@ textarea {
 	.wrapper {
 		width: 100%;
 		background-color:rgb(242,242,242);
-		@include breakpoint(large-desk) {width:79.125em; border-radius:8px; @include box-shadow(0 0 15px rgba(0,0,0,0.7));}
-		margin: 18px auto;             
+		margin: 18px auto; 
+		border-radius:8px;           
+		@include breakpoint(large-desk) {width:71.931818182em; @include box-shadow(0 0 15px rgba(0,0,0,0.7));}
 	}
 
 	img {
@@ -227,6 +231,7 @@ textarea {
 	    padding-right:27px;
 	    padding-left:27px;
 	    font-family: 'Vollkorn', Georgia, serif;
+	    @include breakpoint(small-desk) {font-size: 1.022em; };
     }
     
     nav ul li {
@@ -243,6 +248,7 @@ textarea {
 	    width:126px; height:76px;
 	    background:url("../img/logo2.svg") no-repeat 0 0;
 	    background-size: 126px 154px;
+	    @include breakpoint(mobile) {width:63px; height:38px; background-size: 63px 77px;}
 	    position:relative;
 	    top:0;
 	    left:8.5%;
@@ -250,11 +256,29 @@ textarea {
 	    margin: 0 !important;
     }
     
-/*
-	header h1#logo:hover, header h1#logo:active {
-	    background:url("../img/logo2.svg") no-repeat 0 -77px;
-    }
-*/
+    @include breakpoint(tablet) { 
+  	header h1#logo {
+	  	left: 45%;
+	  	margin: 0;
+  	}
+    
+    #nav {
+	    text-align: center;
+	    margin: 10px 0 0 0;
+	    padding: 0;
+	    width: 100%;
+	}
+	
+	#nav li {
+		display: inline;
+	}
+	
+	#nav a {
+  		display: inline-block;
+  		padding: 15px 20px;
+  		margin: 0 10px;
+  	}
+  	}
     
     #logo span {
 		position: absolute;
@@ -262,6 +286,7 @@ textarea {
 	    width:126px; height:76px;
 	    background:url("../img/logo2.svg") no-repeat 0 -77px;
 	    background-size: 126px 154px;
+	    @include breakpoint(mobile) {width:63px; height:38px; background:url("../img/logo2.svg") no-repeat 0 -38px; background-size: 63px 77px;}
 	    opacity: 0;
 	    animation: fadeout ease-in 4s;
 	    -moz-animation: fadeout ease-in 4s;
@@ -313,6 +338,7 @@ textarea {
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   */
 	.article-image {
 		margin-bottom: 4.5em; 
+	    @include breakpoint(mobile) {margin-bottom: 3em; }
 		@include box-shadow(0 2px 9px rgba(0,0,0,0.4)); 
 		border-bottom: 1px solid rgba(0,0,0,0.3); 
 		position: relative;
@@ -324,6 +350,8 @@ textarea {
 		width: 25%;
 		text-align: right;
 		margin-left: 8.5%;
+		@include breakpoint(small-desk) {width:70%; margin-left: 15%; margin-right: 15%; float: left; text-align: left;}
+		@include breakpoint(tablet) {width:82%; margin-left: 9%; margin-right: 9%; }	
 	}
 	
 	article p, article figure {
@@ -331,10 +359,13 @@ textarea {
 		width: 50%;
 		margin-bottom: 1.55em;
 		margin-right: 8.5%;
+		@include breakpoint(small-desk) {width:70%; margin-left: 15%; margin-right: 15%; float: left; text-align: left;}
+		@include breakpoint(tablet) {width:82%; margin-left: 9%; margin-right: 9%; }	
 	}
 	
 	article {
 		padding-bottom: 4.5em;
+	    @include breakpoint(mobile) {padding-bottom: 3em; }
 		clear: both;
 
 		}
@@ -346,6 +377,11 @@ textarea {
 		text-transform: uppercase;
 		letter-spacing: .15em;
 		display: block;
+	    @include breakpoint(small-desk) {margin-bottom: 1.55em; };
+	}
+	
+	time {
+	    @include breakpoint(small-desk) {float: left; &:after {content: "\2605 "; padding-left: 1em; padding-right: 1em;}; };
 	}
 	
 	.location {
@@ -367,6 +403,7 @@ textarea {
 	.brief {
 		padding-top: 4.5em;
 		padding-bottom: 4.5em;
+	    @include breakpoint(mobile) {padding-top: 3em; padding-bottom: 3em; }
 		border-top: 1px dashed #cccccc;
 	}
 	
@@ -500,6 +537,12 @@ textarea {
 		padding-top: 1.5em;
 		padding-bottom: 1.5em;
 		margin: 0;
+	}
+	
+	footer a {
+		margin-left: 1em;
+		margin-right: 1em;
+	 	@include breakpoint(tablet) {display: block; }
 	}
 
 /* ==========================================================================
