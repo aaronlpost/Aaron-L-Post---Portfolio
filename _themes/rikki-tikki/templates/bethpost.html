@@ -1,0 +1,33 @@
+        {{ if brief == "yes" }}
+        <article class="clearfix brief">
+        {{ else }}
+        <article class="clearfix">
+            <img src="{{_site_root}}assets/img/{{ image }}.jpg" class="article-image">
+        {{ endif }}
+
+        	<header>
+        		<h2 class="title">{{ title }}</h2>
+				<div class="meta">
+					{{ if date }}<time datetime="{{ datestamp format="Y-m-d" }}" pubdate>{{ datestamp format="F j, Y" }}</time>{{ endif }}
+					{{ if location }}<a href="#" class="location">{{ location }}</a>{{ endif }}
+				</div><!-- meta -->
+        	</header>
+        	
+        	{{ content }}
+        	
+        </article>
+        
+        <nav id="pagination" class="clearfix">
+        {{ if prev }}
+        	{{ entries:listing folder="journal" conditions="url:{prev}" }}
+        	<a href="{{ prev }}" class="older">&larr; {{ title }}</a>
+        	{{ /entries:listing }}
+        {{ endif }}       
+        {{ if next }}
+        	{{ entries:listing folder="journal" conditions="url:{next}" }}
+        	<a href="{{ next }}" class="newer">{{ title }} &rarr;</a>
+        	{{ /entries:listing }}
+        {{ endif }}
+        </nav>
+
+
