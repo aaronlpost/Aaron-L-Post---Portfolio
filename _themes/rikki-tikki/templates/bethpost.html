@@ -1,33 +1,23 @@
-        {{ if brief == "yes" }}
-        <article class="clearfix brief">
-        {{ else }}
         <article class="clearfix">
-            <img src="{{_site_root}}assets/img/{{ image }}.jpg" class="article-image">
-        {{ endif }}
+            <img src="{{_site_root}}assets/img/img2.jpg" class="article-image">
 
-        	<header>
-        		<h2 class="title">{{ title }}</h2>
-				<div class="meta">
-					{{ if date }}<time datetime="{{ datestamp format="Y-m-d" }}" pubdate>{{ datestamp format="F j, Y" }}</time>{{ endif }}
-					{{ if location }}<a href="#" class="location">{{ location }}</a>{{ endif }}
-				</div><!-- meta -->
+        	<header class="portfolio-header">
+        		<h2>Beth Post</h2>
+				<a href="http://www.beth-post.com">www.beth-post.com</a>
+				<p>Lorem ipsum dolor sit amet, consectetur adip*isicing elit, sed do eiusmod *tempor incididunt ut labore et dolore magna aliqua.</p>				
         	</header>
         	
-        	{{ content }}
-        	
+			<section class="brief">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</section>   
+			<section class="brief">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</section>        	
         </article>
         
         <nav id="pagination" class="clearfix">
-        {{ if prev }}
-        	{{ entries:listing folder="journal" conditions="url:{prev}" }}
-        	<a href="{{ prev }}" class="older">&larr; {{ title }}</a>
-        	{{ /entries:listing }}
-        {{ endif }}       
-        {{ if next }}
-        	{{ entries:listing folder="journal" conditions="url:{next}" }}
-        	<a href="{{ next }}" class="newer">{{ title }} &rarr;</a>
-        	{{ /entries:listing }}
-        {{ endif }}
+        	<a href="#">Check out Fred Bohn.</a>
+        	<p>He paints. He draws. He makes funny faces. Who doesn't love funny faces.</p>
         </nav>
 
 

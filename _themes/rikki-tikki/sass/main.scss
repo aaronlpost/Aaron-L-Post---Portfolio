@@ -9,11 +9,6 @@
 @import 'normalize';
 @import 'bourbon';
 
-@mixin font-size($sizeValue: 1.8){
-  font-size: ($sizeValue * 10) + px;
-  font-size: $sizeValue + rem;
-}
-
 @mixin breakpoint($point) {
   @if $point == large-desk {
     @media (min-width: 79.125em) { @content; }
@@ -184,7 +179,7 @@ textarea {
 	
 	figcaption {
 		font-family: "Sorts Mill Goudy", serif;	
-		@include font-size(.9);
+		font-size: 1em;
 		font-weight: normal;
 		text-align: center;
 	}
@@ -406,8 +401,37 @@ textarea {
 		padding-bottom: 4.5em;
 	    @include breakpoint(mobile) {padding-top: 3em; padding-bottom: 3em; }
 		border-top: 1px dashed #cccccc;
+		clear: both;
 	}
 	
+	
+/* !Portfolio
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+	.portfolio-header {
+		width: 83%;
+		padding-bottom: 4.5em;
+		@include breakpoint(small-desk) {width: 70% ; }
+		@include breakpoint(tablet) {width: 82%; }
+		@include breakpoint(mobile) {padding-bottom: 3em; }
+		h2 {
+			font-family: "Sorts Mill Goudy", serif;	
+			margin-bottom: .1em;
+			text-align: center;
+		}
+		a {
+	    	font-family: 'Vollkorn', Georgia, serif;
+	    	display: block;
+	    	margin-bottom: 1.55em;
+	    	text-align: center;
+		}
+		p {
+			width: 75%;
+			margin: 0 auto;
+			float: none;
+			text-align: center;
+		}
+	}
+		
 
 /* !Gallery
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   */
@@ -445,7 +469,6 @@ textarea {
 	
 	.prev, .full, .next {
 	    font-family: 'Vollkorn', Georgia, serif;
-	    @include font-size(.9);
 	    text-transform:uppercase; letter-spacing:0.2em;	
 	    padding: 15px 0;
 		position:absolute;
@@ -505,11 +528,16 @@ textarea {
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   */
 	#pagination {
 		font-family: "Sorts Mill Goudy", serif;	
-		@include font-size(1.6);
+		text-align: center;
+		font-size: 1.615em;
 		font-weight: normal;
 		padding-top: 1.5em;
 		padding-bottom: 1.5em;
 		border-top: 1px dashed #cccccc;
+		p {
+			font-size: .7em;
+			margin: 0;
+		}
 	}
 
 	#pagination a:hover {
