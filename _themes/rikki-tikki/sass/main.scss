@@ -48,6 +48,7 @@ body {
     @include breakpoint(mobile) {font-size: 90%; }
     background-color: #141414;
     font-weight: normal;
+    text-rendering: optimizeLegibility;
 }
 
 /*
@@ -276,7 +277,7 @@ textarea {
 	#nav a {
   		display: inline-block;
   		padding: 15px 20px;
-  		margin: 0 10px;
+  		margin: 0;
   	}
   	}
     
@@ -377,15 +378,15 @@ textarea {
 		text-transform: uppercase;
 		letter-spacing: .15em;
 		display: block;
-	    @include breakpoint(small-desk) {margin-bottom: 1.55em; };
 	}
 	
 	time {
-	    @include breakpoint(small-desk) {float: left; &:after {content: "\2605 "; padding-left: 1em; padding-right: 1em;}; };
+	    @include breakpoint(small-desk) {display: block; float: left; &:after {content: "\2605 "; padding-left: 1em; padding-right: 1em;}; };
 	}
 	
 	.location {
 		display: block;
+	    @include breakpoint(small-desk) {float: left; margin-bottom: 1.55em; };
 	}
 	
 	.desc-header p {

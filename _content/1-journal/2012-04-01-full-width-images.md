@@ -1,6 +1,6 @@
 ---
 title: Full Width Images
-location: Wichita, KS
+location: Camp Anawanna!!!!!!!
 image: img2
 status: live
 ---
