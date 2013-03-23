@@ -6,3 +6,4 @@ $(window).load(function(){
 $(".lightSwitcher").click(function(){
     $("#shadow").fadeToggle("fast","swing");
 });
+

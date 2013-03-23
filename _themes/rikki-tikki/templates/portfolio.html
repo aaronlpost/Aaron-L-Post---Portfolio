@@ -1,24 +1,23 @@
-        <header class="desc-header">  
-            <hr>
-        	<h1 class="page-title">{{ title }}</h1>
-        	<p class="blurb">{{ content }}</p>
+        <header>  
         </header>
         <article class="clearfix">
-        	<ul class="gallery-home">
-	        {{ entries:listing folder="portfolio" }}
-	        	
-	        	{{ if featured_image == "yes" }}
-        	   	<li class="gallery-featured">
-        	   	{{ else }}
-        	   	<li>
-        	   	{{ endif }}
-        	   	<figure>
-        	   		<a href="{{ url }}"><img src="../assets/img/{{ image }}.jpg"></a>
-        	   		<figcaption>
-	        	   		{{ title }}
-	           		</figcaption>
-				</figure>
-				</li>
-	        {{ /entries:listing }}
-        	</ul>
+	    <a class="portfolio-hero" href="{{_site_root}}portfolio/bethpost">
+			<div class="Parallax">
+				<img class="slide" src="{{_site_root}}assets/img/beth-frontpage.jpg" >
+				<h2 class="portfolio-title">Beth Post</h2>
+			</div>
+	    </a>
+	    <a class="portfolio-hero" href="{{_site_root}}portfolio/fredbohn">
+			<div class="Parallax">
+				<img class="slide" src="{{_site_root}}assets/img/fred-frontpage.jpg" >
+				<h2 class="portfolio-title">Fred Bohn</h2>
+			</div>
+	    </a>
+	    <a class="portfolio-hero" href="{{_site_root}}portfolio/aaronpost">
+			<div class="Parallax">
+				<img class="slide" src="{{_site_root}}assets/img/beth-frontpage.jpg" >
+				<h2 class="portfolio-title">Aaron L Post</h2>
+				<img class="portfolio-logo" src="{{_site_root}}assets/img/aaron-logo.png" >
+			</div>
+	    </a>
         </article>
