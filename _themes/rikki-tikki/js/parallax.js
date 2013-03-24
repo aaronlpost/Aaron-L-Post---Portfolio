@@ -36,10 +36,7 @@ $(document).ready(function() {
 
 	$('.Parallax').mouseenter(
 		function(){
-			$(this).children('img.portfolio-logo').fadeOut(
-				300
-			);
-			$(this).children('.portfolio-title').fadeOut(
+			$(this).children('div').fadeOut(
 				300
 			);
 		}
@@ -47,10 +44,7 @@ $(document).ready(function() {
 
 	$('.Parallax').mouseleave(
 		function(){
-			$(this).children('img.portfolio-logo').fadeIn(
-				300
-			);
-			$(this).children('.portfolio-title').fadeIn(
+			$(this).children('div').fadeIn(
 				300
 			);
 		}
