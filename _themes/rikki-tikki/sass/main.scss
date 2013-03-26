@@ -449,11 +449,13 @@ textarea {
 		display: block;
 		float: left;
 		@extend .article-image;
+		@include breakpoint(mobile) {width: 100%; }
 	}
 		
 	.Parallax {
         height: 0;
         padding-bottom: 161.6%; /* Proportional scaling of height */
+	    @include breakpoint(mobile) {padding-bottom: 44%;}
         position: relative;
         overflow: hidden;
         width: 100%;
@@ -463,18 +465,20 @@ textarea {
 	        position: absolute;
         	top: 0;
         	left: 0;
+        	@include breakpoint(mobile) {right: 0; left: auto; background-color: #000;}
         }
         div {
         	display: block;
 	        width: 76%;
+	        height: 100%;
 	        padding-left: 12.5%;
 	        padding-right: 12.5%;
 	        @include background-image(linear-gradient(left, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.85) 8%, rgba(0,0,0,0.85) 92%, rgba(0,0,0,0.9) 100%));
 	        @include breakpoint(tablet) {@include background-image(linear-gradient(left, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.75) 8%, rgba(0,0,0,0.75) 92%, rgba(0,0,0,0.8) 100%))};
 	        padding-top: 50%;
-	        padding-bottom: 75%;
 	        position: absolute;
 	        z-index: 1000;
+	        @include breakpoint(mobile) {width: 34%; padding-left: 0; padding-right: 0; padding-top: 12.5%;}
         }
         div img {
 	        width: 50%;
@@ -487,7 +491,8 @@ textarea {
 	        color: #fff;
 	        text-shadow: 1px 1px 0 #000;
 	        text-align: center;	   
-	        margin-top: 1em;     
+	        margin-top: 1em;
+        	@include breakpoint(mobile) {font-size: 1em;}     
         }
     }
 	
