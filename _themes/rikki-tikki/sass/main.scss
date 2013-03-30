@@ -496,6 +496,28 @@ textarea {
         	@include breakpoint(mobile) {font-size: 1em;}     
         }
     }
+    
+    section.half {
+	    img, p {
+		    width: 46%;
+		    margin: 0;
+        	@include breakpoint(tablet) {width: 100%; }     
+	    }
+	    img {
+		    @include box-shadow(0 3px 3px rgba(0,0,0,0.2));		
+			@include breakpoint(tablet) {margin-bottom: 3.5em;}     
+	    }
+	    margin-left: 8.5%;
+	    margin-right: 8.5%;
+    }
+    
+    .left {
+	    float: left;
+    }
+    
+    .right {
+	    float: right;
+    }
 	
 
 /* !Gallery
