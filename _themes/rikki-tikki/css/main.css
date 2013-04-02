@@ -1145,8 +1145,8 @@ section.half {
   float: right; }
 
 /* line 522, ../sass/main.scss */
-.nomargin {
-  margin-bottom: 0; }
+.nopadding {
+  padding-bottom: 0; }
 
 /* !Gallery
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   */
