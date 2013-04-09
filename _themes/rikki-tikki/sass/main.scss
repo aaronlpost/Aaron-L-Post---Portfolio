@@ -453,6 +453,56 @@ textarea {
 		@include breakpoint(mobile) {width: 100%; }
 	}
 		
+	.hero-title {
+		position: absolute;
+		z-index: 500;
+		@include box-shadow(0 2px 9px rgba(0,0,0,0.4)); 
+		h2 {
+			color: #fff;
+	        text-shadow: 1px 1px 0 #000;
+			line-height: 1;
+			font-size: 1.5em;
+			margin-bottom: 0;
+			font-variant: small-caps;
+			letter-spacing: 1px;
+			text-rendering: auto; /* Fix ugly rendering bug(?) */
+		}
+		p {
+			color: #000;
+			background: #fff;
+		}
+	}	
+	
+	.hero-section, .hero-type {
+		padding: .65em 1em;
+		position: relative;
+		float: left;
+		&:after {
+			left: 100%;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+			z-index: 1;
+			border-width: .5em;
+			top: 50%;
+			margin-top: -.5em;
+		}
+	}
+	
+	.hero-type {
+		background-color: #c40;
+	}
+	
+	.hero-section {
+		background-color: #000;
+		&:after {
+			border-left-color: #000;
+		}
+	}
+		
 	.parallax {
         height: 0;
         padding-bottom: 161.6%; /* Proportional scaling of height */
@@ -476,7 +526,7 @@ textarea {
 	        padding-right: 12.5%;
 	        @include background-image(linear-gradient(left, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.85) 8%, rgba(0,0,0,0.85) 92%, rgba(0,0,0,0.9) 100%));
 	        @include breakpoint(tablet) {@include background-image(linear-gradient(left, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.75) 8%, rgba(0,0,0,0.75) 92%, rgba(0,0,0,0.8) 100%))};
-	        padding-top: 50%;
+	        padding-top: 55%;
 	        position: absolute;
 	        z-index: 1000;
 	        @include breakpoint(mobile) {width: 34%; padding-left: 0; padding-right: 0; padding-top: 12.5%;}
