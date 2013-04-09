@@ -450,7 +450,7 @@ textarea {
 		display: block;
 		float: left;
 		@extend .article-image;
-		@include breakpoint(mobile) {width: 100%; }
+		@include breakpoint(mobile) {width: 100%; margin-bottom: 0; }
 	}
 		
 	.hero-title {
@@ -471,6 +471,7 @@ textarea {
 			color: #000;
 			background: #fff;
 		}
+        @include breakpoint(mobile) {position: relative; display: block; width: 100%; font-size: .75em;}
 	}	
 	
 	.hero-section, .hero-type {
@@ -526,6 +527,7 @@ textarea {
 	        padding-right: 12.5%;
 	        @include background-image(linear-gradient(left, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.85) 8%, rgba(0,0,0,0.85) 92%, rgba(0,0,0,0.9) 100%));
 	        @include breakpoint(tablet) {@include background-image(linear-gradient(left, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.75) 8%, rgba(0,0,0,0.75) 92%, rgba(0,0,0,0.8) 100%))};
+	        @include breakpoint(mobile) {background-image: none; background-color: #000;};
 	        padding-top: 55%;
 	        position: absolute;
 	        z-index: 1000;
