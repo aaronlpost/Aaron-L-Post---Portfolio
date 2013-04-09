@@ -986,7 +986,7 @@ figure img {
     /* line 411, ../sass/main.scss */
     .portfolio-header, .center {
       padding-bottom: 3em;
-      width: auto; } }
+      width: none; } }
   /* line 417, ../sass/main.scss */
   .portfolio-header h2, .center h2 {
     font-family: "Sorts Mill Goudy", serif;

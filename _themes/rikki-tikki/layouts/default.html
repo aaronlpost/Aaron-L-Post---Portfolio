@@ -49,6 +49,8 @@
         <script src="{{ theme:js src='plugins.js' }}"></script>
         <script src="{{ theme:js src='main.js' }}"></script>
         <script src="{{ theme:js src='parallax.js' }}"></script>
+        <script src="{{ theme:js src='jquery.fitvids.js' }}"></script>
+
 
         <script>
             var _gaq=[['_setAccount','UA-38220841-1'],['_trackPageview']];
@@ -56,5 +58,11 @@
             g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
+		<script>
+		  $(document).ready(function(){
+		    // Target your .container, .wrapper, .post, etc.
+		    $("#fitvid").fitVids();
+		  });
+		</script>
     </body>
 </html>
