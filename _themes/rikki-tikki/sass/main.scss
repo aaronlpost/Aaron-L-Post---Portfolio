@@ -549,6 +549,18 @@ textarea {
         }
     }
     
+	.portfolio-hero-half {
+		@extend .portfolio-hero;
+		width: 50%;
+        @include breakpoint(mobile) {width: 100%;}     
+		.parallax {
+			padding-bottom: 50%;
+			div {
+				padding-top: 20%;
+			}
+		}
+	}
+    
     section.half {
 	    img, p {
 		    width: 46%;
