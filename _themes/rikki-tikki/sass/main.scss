@@ -525,8 +525,8 @@ textarea {
 	        height: 100%;
 	        padding-left: 12.5%;
 	        padding-right: 12.5%;
-	        @include background-image(linear-gradient(left, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.85) 8%, rgba(0,0,0,0.85) 92%, rgba(0,0,0,0.9) 100%));
-	        @include breakpoint(tablet) {@include background-image(linear-gradient(left, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.75) 8%, rgba(0,0,0,0.75) 92%, rgba(0,0,0,0.8) 100%))};
+	        @include background-image(linear-gradient(left, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 100%));
+/* 	        @include breakpoint(tablet) {@include background-image(linear-gradient(left, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.75) 8%, rgba(0,0,0,0.75) 92%, rgba(0,0,0,0.8) 100%))}; */
 	        @include breakpoint(mobile) {background-image: none; background-color: #000;};
 	        padding-top: 55%;
 	        position: absolute;
@@ -560,6 +560,19 @@ textarea {
 			}
 		}
 	}
+	
+	.portfolio-hero-quarter {
+		@extend .portfolio-hero;
+		width: 25%;
+        @include breakpoint(mobile) {width: 50%;}     
+		.parallax {
+			padding-bottom: 100%;
+			div {
+				padding-top: 20%;
+			}
+		}
+	}
+
     
     section.half {
 	    img, p {
