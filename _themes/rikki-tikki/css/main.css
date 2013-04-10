@@ -1047,9 +1047,8 @@ figure img {
 /* line 456, ../sass/main.scss */
 .hero-title {
   position: absolute;
-  z-index: 500;
-  box-shadow: 0 2px 9px rgba(0, 0, 0, 0.4); }
-  /* line 460, ../sass/main.scss */
+  z-index: 500; }
+  /* line 459, ../sass/main.scss */
   .hero-title h2 {
     color: #fff;
     text-shadow: 1px 1px 0 #000;
@@ -1060,7 +1059,7 @@ figure img {
     letter-spacing: 1px;
     text-rendering: auto;
     /* Fix ugly rendering bug(?) */ }
-  /* line 470, ../sass/main.scss */
+  /* line 469, ../sass/main.scss */
   .hero-title p {
     color: #000;
     background: #fff; }
@@ -1068,15 +1067,16 @@ figure img {
     /* line 456, ../sass/main.scss */
     .hero-title {
       position: relative;
-      display: block;
+      display: inline-block;
       width: 100%;
       font-size: .75em; } }
 
-/* line 477, ../sass/main.scss */
+/* line 476, ../sass/main.scss */
 .hero-section, .hero-type {
   padding: .65em 1em;
   position: relative;
-  float: left; }
+  float: left;
+  box-shadow: 0 2px 9px rgba(0, 0, 0, 0.4); }
   /* line 481, ../sass/main.scss */
   .hero-section:after, .hero-type:after {
     left: 100%;

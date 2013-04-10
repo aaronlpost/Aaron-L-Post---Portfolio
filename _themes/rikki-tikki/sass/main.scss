@@ -456,7 +456,6 @@ textarea {
 	.hero-title {
 		position: absolute;
 		z-index: 500;
-		@include box-shadow(0 2px 9px rgba(0,0,0,0.4)); 
 		h2 {
 			color: #fff;
 	        text-shadow: 1px 1px 0 #000;
@@ -471,13 +470,14 @@ textarea {
 			color: #000;
 			background: #fff;
 		}
-        @include breakpoint(mobile) {position: relative; display: block; width: 100%; font-size: .75em;}
+        @include breakpoint(mobile) {position: relative; display: inline-block; width: 100%; font-size: .75em;}
 	}	
 	
 	.hero-section, .hero-type {
 		padding: .65em 1em;
 		position: relative;
 		float: left;
+		@include box-shadow(0 2px 9px rgba(0,0,0,0.4)); 
 		&:after {
 			left: 100%;
 			border: solid transparent;
