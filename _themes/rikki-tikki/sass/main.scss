@@ -600,6 +600,16 @@ textarea {
 		padding-bottom: 0;
 	}
 
+/* !Map
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   */	
+	.map {
+		width: 46%;
+		@include box-shadow(0 3px 3px rgba(0,0,0,0.2));		
+		border: 1px solid rgb(181,181,181); 
+		@include breakpoint(mobile) {width: 100%; float: left; margin-bottom: 3em; }
+	}
+
+	
 /* !Gallery
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   */
 	.gallery-home {
