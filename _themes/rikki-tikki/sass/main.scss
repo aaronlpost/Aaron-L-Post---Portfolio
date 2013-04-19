@@ -137,7 +137,7 @@ textarea {
 	a:link, a:visited {
 		color:rgb(204,85,0); 
 		text-decoration: none; 
-	    @include transition (color .2s ease);
+	    @include transition (all .2s cubic-bezier(0.645, 0.045, 0.355, 1)); 
 	} 
 	
 	a:hover {
@@ -209,19 +209,17 @@ textarea {
     	margin:0 8.5% 0 0;
     }
     
-    nav a:hover, nav a:active {
+    nav ul li a:hover, nav ul li a:active {
 	    color:#fff; 
 	    background: #cc5500;
-	    background: -webkit-gradient(linear, left top, left bottom, from(#cc5500), to(#e15f00));
-	    background: -moz-linear-gradient(top,  #cc5500,  #e15f00);
 	    text-shadow:0 1px 0 #222;
-	    @include transition (color .2s ease);
     }
 
     nav ul li a {
 	    display:inline-block;
 		font-size: 1.125em;
-	    text-shadow:0 1px 0 #fff;  
+	    text-shadow:0 1px 0 #fff; 
+	    background: transparent; 
 	    padding-top:2.8em;
 	    padding-bottom:2.5em;
 	    padding-right:27px;
@@ -272,8 +270,9 @@ textarea {
 	
 	#nav a {
   		display: inline-block;
-  		padding: 15px 20px;
-  		margin: 0;
+  		padding: 10px 20px;
+  		margin-bottom: 10px;
+  		border-radius: 6px
   	}
   	}
     
@@ -285,13 +284,13 @@ textarea {
 	    background-size: 126px 154px;
 	    @include breakpoint(mobile) {width:63px; height:38px; background:url("../img/logo2.svg") no-repeat 0 -38px; background-size: 63px 77px;}
 	    opacity: 0;
-	    animation: fadeout ease-in 4s;
-	    -moz-animation: fadeout ease-in 4s;
-	    -webkit-animation: fadeout ease-in 4s;
-	    -o-animation: fadeout ease-in 4s;
-		-webkit-transition: opacity ease-in 0.5s;
-		-moz-transition:    opacity ease-in 0.5s;
-		-o-transition:      opacity ease-in 0.5s;
+	    animation: fadeout cubic-bezier(0.645, 0.045, 0.355, 1) 4s;
+	    -moz-animation: fadeout cubic-bezier(0.645, 0.045, 0.355, 1) 4s;
+	    -webkit-animation: fadeout cubic-bezier(0.645, 0.045, 0.355, 1) 4s;
+	    -o-animation: fadeout cubic-bezier(0.645, 0.045, 0.355, 1) 4s;
+		-webkit-transition: opacity cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s;
+		-moz-transition:    opacity cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s;
+		-o-transition:      opacity cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s;
 	}
 
     #logo span:hover {
@@ -470,7 +469,7 @@ textarea {
 			color: #000;
 			background: #fff;
 		}
-        @include breakpoint(mobile) {position: relative; display: inline-block; width: 100%; font-size: .75em;}
+        @include breakpoint(mobile) {position: relative; display: inline-block; width: 100%; font-size: .75em; margin-bottom: .75em;}
 	}	
 	
 	.hero-section, .hero-type {
@@ -478,30 +477,17 @@ textarea {
 		position: relative;
 		float: left;
 		@include box-shadow(0 2px 9px rgba(0,0,0,0.4)); 
-		&:after {
-			left: 100%;
-			border: solid transparent;
-			content: " ";
-			height: 0;
-			width: 0;
-			position: absolute;
-			pointer-events: none;
-			z-index: 1;
-			border-width: .5em;
-			top: 50%;
-			margin-top: -.5em;
-		}
 	}
 	
 	.hero-type {
-		background-color: #c40;
+		background-color: rgba(204,68,0,0.9);
+		border-bottom-right-radius: 6px;
+	    @include breakpoint(mobile) {border-top-right-radius: 6px;}
 	}
 	
 	.hero-section {
-		background-color: #000;
-		&:after {
-			border-left-color: #000;
-		}
+		background-color: rgba(0,0,0,0.9);
+		z-index: 1;
 	}
 		
 	.parallax {
