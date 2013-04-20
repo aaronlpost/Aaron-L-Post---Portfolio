@@ -5,7 +5,7 @@
         	<header>
         		<h2 class="title"><a href="{{ url }}">{{ title }}</a></h2>
 				<div class="meta">
-					{{ if date }}<time datetime="2012-10-25" pubdate>{{ datestamp format="F j, Y" }}</time>{{ endif }}
+					{{ if date }}<time datetime="2012-10-25" pubdate>{{ datestamp format="M j, Y" }}</time>{{ endif }}
 					{{ if location }}<a href="#" class="location">{{ location }}</a>{{ endif }}
 				</div><!-- meta -->
         	</header>
@@ -14,7 +14,7 @@
         	<header>
         		<h2 class="title"><a href="{{ url }}">{{ title }}</a></h2>
 				<div class="meta">
-					{{ if date }}<time datetime="{{ datestamp format="Y-m-d" }}" pubdate>{{ datestamp format="F j, Y" }}</time>{{ endif }}
+					{{ if date }}<time datetime="{{ datestamp format="Y-m-d" }}" pubdate>{{ datestamp format="M j, Y" }}</time>{{ endif }}
 					{{ if location }}<a href="#" class="location">{{ location }}</a>{{ endif }}
 				</div><!-- meta -->
         	</header>
