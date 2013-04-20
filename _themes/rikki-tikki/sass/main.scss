@@ -346,7 +346,7 @@ textarea {
 		width: 25%;
 		text-align: right;
 		margin-left: 8.5%;
-		@include breakpoint(small-desk) {width:70%; margin-left: 15%; margin-right: 15%; float: left; text-align: left;}
+		@include breakpoint(small-desk) {width:70%; margin-left: 15%; margin-right: 15%; float: left; text-align: left;} /* check */
 		@include breakpoint(tablet) {width:82%; margin-left: 9%; margin-right: 9%; }	
 	}
 	
@@ -409,8 +409,9 @@ textarea {
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 	.portfolio-header, .center {
 		width: 83%;
+		margin-left: 8.5%;
 		padding-bottom: 4.5em;
-		@include breakpoint(small-desk) {width: 70% ; }
+		/* @include breakpoint(small-desk) {width: 70% ; } */ /* check */
 		@include breakpoint(tablet) {width: 82%; }
 		@include breakpoint(mobile) {padding-bottom: 3em; width: none; }
 		h2 {
@@ -425,7 +426,7 @@ textarea {
 	    	text-align: center;
 		}
 		p {
-			width: 75%;
+			width: 83%%;
 			margin: 0 auto;
 			float: none;
 			text-align: center;
@@ -435,7 +436,7 @@ textarea {
 	
 	.center {
 		margin-left: 8.5%;
-		@include breakpoint(small-desk) {margin-left: 15%; }
+		/* @include breakpoint(small-desk) {margin-left: 15%; } */ /* check */
 		@include breakpoint(tablet) {margin-left: 9%; width: 82%; }
 	}
 	
@@ -537,6 +538,7 @@ textarea {
     
 	.portfolio-hero-half {
 		@extend .portfolio-hero;
+		margin-bottom: 0;
 		width: 50%;
         @include breakpoint(mobile) {width: 100%;}     
 		.parallax {
@@ -549,6 +551,7 @@ textarea {
 	
 	.portfolio-hero-quarter {
 		@extend .portfolio-hero;
+		margin-bottom: 0;
 		width: 25%;
         @include breakpoint(mobile) {width: 50%;}     
 		.parallax {
@@ -595,6 +598,9 @@ textarea {
 		@include breakpoint(mobile) {width: 100%; float: left; margin-bottom: 3em; }
 	}
 
+	.map-container {
+		margin-top: 1em;
+	}
 	
 /* !Gallery
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   */
@@ -700,6 +706,12 @@ textarea {
 		p {
 			font-size: .7em;
 			margin: 0;
+		}
+		.left {
+			margin-left: 8.5%;
+		}
+		.right {
+			margin-right: 8.5%;
 		}
 	}
 
