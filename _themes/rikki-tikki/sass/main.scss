@@ -603,6 +603,19 @@ textarea {
 		margin-top: 1em;
 	}
 	
+/* !About
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   */	
+	.parallax-contain {
+		overflow: hidden;
+	}
+	
+	.img-overlay {
+		position: absolute;
+		z-index: 100;
+		top: -450px;
+		left: 0; /* Firefox floats to right if missing */
+	}
+	
 /* !Gallery
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   */
 	.gallery-home {
