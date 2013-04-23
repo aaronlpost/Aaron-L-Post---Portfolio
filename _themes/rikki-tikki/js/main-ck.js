@@ -15,4 +15,4 @@ $(document).ready(function() {
 	return false;
 	});
 });
-*/$(document).ready(function(){var e=$(window);$(window).scroll(function(){var t=e.scrollTop();if(t<150){var n=-450+3*t+"px",r=.0167*t-1.5;$(".img-overlay").css({top:n});$(".img-overlay").css({opacity:r})}else{$(".img-overlay").css({top:"0"});$(".img-overlay").css({opacity:"1"})}})});
+*/$(document).ready(function(){var e=$(window);$(window).scroll(function(){var t=e.scrollTop();t<75?$(".img-overlay").css({opacity:"0"}):$(".img-overlay").css({opacity:"1"})})});

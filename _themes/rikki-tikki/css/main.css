@@ -1248,33 +1248,39 @@ section.half {
 .img-overlay {
   position: absolute;
   z-index: 100;
-  top: -450px;
+  opacity: 0;
+  top: 0;
   left: 0;
-  /* Firefox floats to right if missing */ }
+  /* Firefox floats to right if missing */
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -ms-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out; }
 
 /* !Gallery
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   */
-/* line 621, ../sass/main.scss */
+/* line 623, ../sass/main.scss */
 .gallery-home {
   margin: 0;
   padding: 0; }
 
-/* line 626, ../sass/main.scss */
+/* line 628, ../sass/main.scss */
 .gallery-home li {
   width: 422px;
   float: left;
   list-style: none; }
 
-/* line 632, ../sass/main.scss */
+/* line 634, ../sass/main.scss */
 .gallery-featured {
   width: 100% !important; }
 
-/* line 636, ../sass/main.scss */
+/* line 638, ../sass/main.scss */
 .gallery-home a {
   display: block;
   position: relative; }
 
-/* line 641, ../sass/main.scss */
+/* line 643, ../sass/main.scss */
 .gallery-home a:hover::before, .gallery-home a:active::before {
   content: "";
   position: absolute;
@@ -1282,11 +1288,11 @@ section.half {
   height: 100%;
   box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.62); }
 
-/* line 649, ../sass/main.scss */
+/* line 651, ../sass/main.scss */
 .herowrap {
   position: relative; }
 
-/* line 653, ../sass/main.scss */
+/* line 655, ../sass/main.scss */
 .prev, .full, .next {
   font-family: 'Vollkorn', Georgia, serif;
   text-transform: uppercase;
@@ -1296,22 +1302,22 @@ section.half {
   bottom: 3em;
   text-align: center; }
 
-/* line 661, ../sass/main.scss */
+/* line 663, ../sass/main.scss */
 .prev {
   width: 25%;
   left: 0; }
 
-/* line 666, ../sass/main.scss */
+/* line 668, ../sass/main.scss */
 .full {
   width: 50%;
   left: 25%; }
 
-/* line 671, ../sass/main.scss */
+/* line 673, ../sass/main.scss */
 .next {
   width: 25%;
   right: 0; }
 
-/* line 676, ../sass/main.scss */
+/* line 678, ../sass/main.scss */
 #shadow {
   background-color: rgba(0, 0, 0, 0.85);
   position: absolute;
@@ -1346,7 +1352,7 @@ section.half {
 */
 /* !Footer
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   */
-/* line 712, ../sass/main.scss */
+/* line 714, ../sass/main.scss */
 #pagination {
   font-family: "Sorts Mill Goudy", serif;
   text-align: center;
@@ -1355,51 +1361,51 @@ section.half {
   padding-top: 1.5em;
   padding-bottom: 1.5em;
   border-top: 1px dashed #cccccc; }
-  /* line 720, ../sass/main.scss */
+  /* line 722, ../sass/main.scss */
   #pagination p {
     font-size: .7em;
     margin: 0; }
-  /* line 724, ../sass/main.scss */
+  /* line 726, ../sass/main.scss */
   #pagination .left {
     margin-left: 8.5%; }
-  /* line 727, ../sass/main.scss */
+  /* line 729, ../sass/main.scss */
   #pagination .right {
     margin-right: 8.5%; }
 
-/* line 732, ../sass/main.scss */
+/* line 734, ../sass/main.scss */
 #pagination a:hover {
   color: black;
   text-shadow: 0px 1px 1px #cc9c7a;
   text-decoration: none;
   background: transparent; }
 
-/* line 739, ../sass/main.scss */
+/* line 741, ../sass/main.scss */
 .older {
   float: left;
   margin-left: 8.5%; }
 
-/* line 744, ../sass/main.scss */
+/* line 746, ../sass/main.scss */
 .newer {
   float: right;
   margin-right: 8.5%; }
 
-/* line 749, ../sass/main.scss */
+/* line 751, ../sass/main.scss */
 footer {
   border-top: 1px dashed #cccccc; }
 
-/* line 753, ../sass/main.scss */
+/* line 755, ../sass/main.scss */
 footer p {
   text-align: center;
   padding-top: 1.5em;
   padding-bottom: 1.5em;
   margin: 0; }
 
-/* line 760, ../sass/main.scss */
+/* line 762, ../sass/main.scss */
 footer a {
   margin-left: 1em;
   margin-right: 1em; }
   @media (max-width: 55em) {
-    /* line 760, ../sass/main.scss */
+    /* line 762, ../sass/main.scss */
     footer a {
       display: block; } }
 
@@ -1409,7 +1415,7 @@ footer a {
 /*
  * Image replacement
  */
-/* line 774, ../sass/main.scss */
+/* line 776, ../sass/main.scss */
 .ir {
   background-color: transparent;
   border: 0;
@@ -1417,7 +1423,7 @@ footer a {
   /* IE 6/7 fallback */
   *text-indent: -9999px; }
 
-/* line 782, ../sass/main.scss */
+/* line 784, ../sass/main.scss */
 .ir:before {
   content: "";
   display: block;
@@ -1427,7 +1433,7 @@ footer a {
 /*
  * Hide from both screenreaders and browsers: h5bp.com/u
  */
-/* line 793, ../sass/main.scss */
+/* line 795, ../sass/main.scss */
 .hidden {
   display: none !important;
   visibility: hidden; }
@@ -1435,7 +1441,7 @@ footer a {
 /*
  * Hide only visually, but have it available for screenreaders: h5bp.com/v
  */
-/* line 802, ../sass/main.scss */
+/* line 804, ../sass/main.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -1450,7 +1456,7 @@ footer a {
  * Extends the .visuallyhidden class to allow the element to be focusable
  * when navigated to via the keyboard: h5bp.com/p
  */
-/* line 819, ../sass/main.scss */
+/* line 821, ../sass/main.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -1463,7 +1469,7 @@ footer a {
 /*
  * Hide visually and from screenreaders, but maintain layout
  */
-/* line 832, ../sass/main.scss */
+/* line 834, ../sass/main.scss */
 .invisible {
   visibility: hidden; }
 
@@ -1478,7 +1484,7 @@ footer a {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-/* line 849, ../sass/main.scss */
+/* line 851, ../sass/main.scss */
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -1486,7 +1492,7 @@ footer a {
   display: table;
   /* 2 */ }
 
-/* line 854, ../sass/main.scss */
+/* line 856, ../sass/main.scss */
 .clearfix:after {
   clear: both; }
 
@@ -1494,7 +1500,7 @@ footer a {
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
  */
-/* line 863, ../sass/main.scss */
+/* line 865, ../sass/main.scss */
 .clearfix {
   *zoom: 1; }
 
@@ -1503,7 +1509,7 @@ footer a {
    Inlined to avoid required HTTP connection: h5bp.com/r
    ========================================================================== */
 @media print {
-  /* line 873, ../sass/main.scss */
+  /* line 875, ../sass/main.scss */
   * {
     background: transparent !important;
     color: #000 !important;
@@ -1511,59 +1517,59 @@ footer a {
     box-shadow: none !important;
     text-shadow: none !important; }
 
-  /* line 881, ../sass/main.scss */
+  /* line 883, ../sass/main.scss */
   a,
   a:visited {
     text-decoration: underline; }
 
-  /* line 885, ../sass/main.scss */
+  /* line 887, ../sass/main.scss */
   a[href]:after {
     content: " (" attr(href) ")"; }
 
-  /* line 889, ../sass/main.scss */
+  /* line 891, ../sass/main.scss */
   abbr[title]:after {
     content: " (" attr(title) ")"; }
 
   /*
    * Don't show links for images, or javascript/internal links
    */
-  /* line 899, ../sass/main.scss */
+  /* line 901, ../sass/main.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: ""; }
 
-  /* line 904, ../sass/main.scss */
+  /* line 906, ../sass/main.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid; }
 
-  /* line 909, ../sass/main.scss */
+  /* line 911, ../sass/main.scss */
   thead {
     display: table-header-group;
     /* h5bp.com/t */ }
 
-  /* line 914, ../sass/main.scss */
+  /* line 916, ../sass/main.scss */
   tr,
   img {
     page-break-inside: avoid; }
 
-  /* line 918, ../sass/main.scss */
+  /* line 920, ../sass/main.scss */
   img {
     max-width: 100% !important; }
 
   @page {
     margin: 0.5cm; }
 
-  /* line 928, ../sass/main.scss */
+  /* line 930, ../sass/main.scss */
   p,
   h2,
   h3 {
     orphans: 3;
     widows: 3; }
 
-  /* line 934, ../sass/main.scss */
+  /* line 936, ../sass/main.scss */
   h2,
   h3 {
     page-break-after: avoid; } }

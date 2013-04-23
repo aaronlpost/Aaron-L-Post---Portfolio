@@ -612,8 +612,10 @@ textarea {
 	.img-overlay {
 		position: absolute;
 		z-index: 100;
-		top: -450px;
+		opacity: 0;
+		top: 0;
 		left: 0; /* Firefox floats to right if missing */
+		@include transition (all 2.0s ease-in-out);
 	}
 	
 /* !Gallery
