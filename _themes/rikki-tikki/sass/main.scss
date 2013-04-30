@@ -208,6 +208,12 @@ textarea {
 		font-weight: normal !important;
 	}
 
+	h4 {
+	    font-family: 'Vollkorn', Georgia, serif;
+		font-size: 1.125em;
+		margin: 0;
+		font-weight: 700;
+	}
 	
 	figcaption {
 		font-family: "Sorts Mill Goudy", serif;	
@@ -692,7 +698,6 @@ textarea {
 		clear: both;
 		background: #e2e2e2;
 		border-radius:2px;
-		max-width: 4em;
 		padding: .25em 0;
 		margin: 0 auto;
 		border: 1px solid #fff;
