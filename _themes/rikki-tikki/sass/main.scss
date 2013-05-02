@@ -665,7 +665,7 @@ textarea {
 		box-shadow: none !important;
 	}
 
-	.baby-contain, .italy-contain {
+	.baby-contain, .italy-contain, .school {
 		position: relative;
 		width: 46%;
 		margin: 0;
@@ -678,6 +678,26 @@ textarea {
 			width: 100% !important;
 			@include breakpoint(tablet) {margin-bottom: 0 !important;}     
 		}
+	}
+	
+	.reveal {
+		position: absolute;
+		top:0;
+		left: 0;
+		display: none;
+		z-index: 10000;
+	}
+	
+	.reveal h4 {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		text-align: left;
+		padding: .75em ;
+		color: #fff;
+		background-color: rgba(0,0,0,0.5);
+		font-weight: 400; 
+		font-size: 1em;
 	}
 		
 /*
@@ -697,11 +717,9 @@ textarea {
 		text-align: center;
 		clear: both;
 		background: #e2e2e2;
-		border-radius:2px;
 		padding: .25em 0;
 		margin: 0 auto;
 		border: 1px solid #fff;
-		box-shadow: 0 2px 2px rgba(0,0,0,0.1);	
 	}
 	
 	.timeline ul {
@@ -831,14 +849,15 @@ textarea {
 	}
 	
 	.detail a:hover img {
-		box-shadow: 0 2px 2px rgba(0,0,0,0.6);	
-		border: 1px solid #c50;
+		opacity: .4;
 	}
 	
 	.detail a {
 		display: inline-block;
 		width: 30%;
 		margin: 5% 5% 5% 0;
+		background-color: #000;
+		border: 1px solid white;
 		@include breakpoint(tablet) {margin-top: 0; }
 	}
 	

@@ -58,7 +58,13 @@ $(document).ready(function(){
 
 }); // window scroll Ends
 
-
+jQuery.easing.def = "easeInOutCubic";
+$("#night-trigger").hover( function() { $("#night").fadeToggle(); } );
+$("#eyes-trigger").hover( function() { $("#eyes").fadeToggle(); } );
+$("#autumn-trigger").hover( function() { $("#autumn").fadeToggle(); } );
+$("#cast-trigger").hover( function() { $("#cast").fadeToggle(); } );
+$("#flight-trigger").hover( function() { $("#flight").fadeToggle(); } );
+$("#bridge-trigger").hover( function() { $("#bridge").fadeToggle(); } );
 
 
 });
