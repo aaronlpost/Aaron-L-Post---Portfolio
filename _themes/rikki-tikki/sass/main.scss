@@ -497,7 +497,7 @@ textarea {
 		z-index: 500;
 		h2 {
 			color: #fff;
-	        text-shadow: 1px 1px 0 #000;
+	        text-shadow: 1px 1px 3px #000;
 			line-height: 1;
 			font-size: 1.5em;
 			margin-bottom: 0;
@@ -568,7 +568,7 @@ textarea {
         div h2 {
 	        font-size: 1.5em;
 	        color: #fff;
-	        text-shadow: 1px 1px 0 #000;
+	        text-shadow: 1px 1px 3px #000;
 	        text-align: center;	   
 	        margin-top: 1em;
         	@include breakpoint(mobile) {font-size: 1em;}     
@@ -659,21 +659,16 @@ textarea {
 		opacity: 0;
 		box-shadow: none !important;
 	}
-	
-	.italy {
-		left: -400px;
-		box-shadow: none !important;
-	}
 
-	.baby-contain, .italy-contain, .school {
+	.baby-container, .container {
 		position: relative;
 		width: 46%;
 		margin: 0;
 		overflow: hidden;
 		box-shadow: 0 3px 3px rgba(0,0,0,0.2);	
-		border: 1px solid #fff;
+		border: 1px solid #000;
 		z-index: 20;
-        @include breakpoint(tablet) {width: 100%; margin-bottom: 3.5em; } 
+        @include breakpoint(tablet) {width: 100%; margin-bottom: 2.5em; border: none; } 
 		img {
 			width: 100% !important;
 			@include breakpoint(tablet) {margin-bottom: 0 !important;}     
@@ -688,7 +683,8 @@ textarea {
 		z-index: 10000;
 	}
 	
-	.reveal h4 {
+	.reveal a {
+		font-family: "Sorts Mill Goudy", serif;	
 		position: absolute;
 		bottom: 0;
 		width: 100%;
@@ -716,10 +712,16 @@ textarea {
 	.timeline-year {
 		text-align: center;
 		clear: both;
-		background: #e2e2e2;
+		background: #ba4003;
 		padding: .25em 0;
 		margin: 0 auto;
-		border: 1px solid #fff;
+		width: 20%;
+		color: #fff;
+		text-shadow: 1px 1px 3px #000;
+		font-size: 1.75em;
+		border-radius: 5px;
+		box-shadow: inset 0px 0px 6px rgba(0,0,0,0.3);
+		@include breakpoint(tablet) {width: 100%; border-radius: 0;}
 	}
 	
 	.timeline ul {
@@ -758,13 +760,14 @@ textarea {
 		position: relative;
 		z-index: 20;
 		overflow: hidden;
-		background: #e2e2e2;
+		background: #222;
 		padding: 20px;
 		position: relative;
-		border-radius:2px;
-		border: 1px solid #fff;
 		box-shadow: 0 2px 2px rgba(0,0,0,0.1);	
 		height: 100%;
+		border-radius: 5px;
+		@include breakpoint(tablet) {border-radius: 5px 0px 0px 0px;}
+		@include breakpoint(mobile) {border-radius: 5px 5px 0px 0px;}
 	}
 	
 	.info-arrow-left {
@@ -793,19 +796,39 @@ textarea {
 		position: relative;
 		z-index: 100;
 	}
+	
+	.info-text p, .info-text h4 {
+		font-family: "Sorts Mill Goudy", serif;	
+		color: #fff;
+		font-weight: 400;
+	}
+	
+	.info-text a {
+		font-family: "Sorts Mill Goudy", serif;	
+		color: #fa7414;
+		font-weight: 400;
+		font-size: 1.125em;
+		display: block;
+	}
+	
+	.info-text a:hover {
+		color: #fff;
+		text-shadow: 0px 1px 5px #000;
+	}
 
 	.info-icon {
 		position: absolute;
-		color: #eaeaea;
+		color: #111;
 		font-size: 11em;
 		line-height: 1;
 		z-index: 30;
 		top:-20px;
 		right: 20px;
+		width: auto;
 		@include transform(rotate(-10deg));
-		text-shadow: 1px 1px 0 #fff;
 	}
 
+/*
 	.dots:after {
 		content: "____________";
 		position: absolute;
@@ -818,6 +841,7 @@ textarea {
 		text-shadow: 0 1px 2px rgba(184,184,184,0.7);
 		@include breakpoint(tablet) {display: none; }	
 	}
+*/
 
 	.timeline p {
 		text-align: left;
@@ -828,7 +852,7 @@ textarea {
 	
 	.timeline time {
 		font-size: 1.125em;
-		font-family: "Vollkorn", serif;
+		font-family: "Sorts Mill Goudy", serif;	
 		color: #7e7e7e;
 		font-style: italic;
 	}
@@ -844,12 +868,13 @@ textarea {
 
 	.detail a img {
 		box-shadow: 0 2px 2px rgba(0,0,0,0.2);	
-		border: 1px solid #fff;
+		border: 1px solid #333;
 	    @include transition (all .2s cubic-bezier(0.645, 0.045, 0.355, 1)); 
 	}
 	
 	.detail a:hover img {
-		opacity: .4;
+		box-shadow: 0 0 7px rgba(0,0,0,0.5);	
+		border: 1px solid #000;
 	}
 	
 	.detail a {
@@ -857,7 +882,6 @@ textarea {
 		width: 30%;
 		margin: 5% 5% 5% 0;
 		background-color: #000;
-		border: 1px solid white;
 		@include breakpoint(tablet) {margin-top: 0; }
 	}
 	
@@ -1198,3 +1222,6 @@ textarea {
         page-break-after: avoid;
     }
 }
+
+
+	   

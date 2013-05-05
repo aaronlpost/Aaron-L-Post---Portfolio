@@ -25,15 +25,9 @@ $(document).ready(function(){
 
       $(window).scroll(function() {
 		// Scroll the background at var speed
-		var babydistance = ($('.baby-contain').offset().top - 100), italydistance = ($('.italy-contain').offset().top - 100);
+		var babydistance = ($('.baby-container').offset().top - 100);
 		//var yPos = $window.scrollTop(), distance = $('.img-contain').offset().top;
-		if ( $window.scrollTop() >= italydistance ) {
-		$('.italy').css({"left":"0" });
-		}
 
-		else {
-		$('.italy').css({"left":"-400px" });
-		}
 
 		if ( $window.scrollTop() >= babydistance ) {
 		// Put together our final background position
@@ -65,7 +59,9 @@ $("#autumn-trigger").hover( function() { $("#autumn").fadeToggle(); } );
 $("#cast-trigger").hover( function() { $("#cast").fadeToggle(); } );
 $("#flight-trigger").hover( function() { $("#flight").fadeToggle(); } );
 $("#bridge-trigger").hover( function() { $("#bridge").fadeToggle(); } );
-
+$("#beth-trigger").hover( function() { $("#beth").fadeToggle(); } );
+$("#fred-trigger").hover( function() { $("#fred").fadeToggle(); } );
+$("#aaron-trigger").hover( function() { $("#aaron").fadeToggle(); } );
 
 });
 
