@@ -643,6 +643,32 @@ textarea {
 	
 /* !About
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   */	
+	.title-words {
+		width: 11.5em;
+		margin: 0 auto; 
+		padding: 1.5em 0;
+		background-color: #f2f2f2;
+		@include breakpoint(mobile) {font-size: 1.75em; width: 11.75em; }
+	}
+	
+	.left-words {
+		display: block;
+		font-size: .8em;
+		margin-left: 1.7em;
+		margin-bottom: -.25em;
+		font-style: italic;
+	}
+	
+	.center-words {
+		font-size: 1.4em;
+	}
+	
+	.right-words {
+		display: block;
+		margin-left: 9.15em;
+		font-style: italic;
+	}
+	
 	.parallax-contain {
 		overflow: hidden;
 	}
@@ -668,7 +694,10 @@ textarea {
 		box-shadow: 0 3px 3px rgba(0,0,0,0.2);	
 		border: 1px solid #000;
 		z-index: 20;
-        @include breakpoint(tablet) {width: 100%; margin-bottom: 2.5em; border: none; } 
+		border-radius: 8px;
+		-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC); /* Fix for bleeding corners */
+        @include breakpoint(tablet) {width: 100%; margin-bottom: 2.5em; border: none; border-radius: 0px 8px 8px 8px; } 
+        @include breakpoint(mobile) {border-radius: 0px 0px 8px 8px; } 
 		img {
 			width: 100% !important;
 			@include breakpoint(tablet) {margin-bottom: 0 !important;}     
@@ -696,16 +725,13 @@ textarea {
 		font-size: 1em;
 	}
 		
-/*
-	.parallax-image {
-		position: relative;
-	}
-*/
 
 /* !Timeline
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   */	
 	.timeline {
-		@include background-image(linear-gradient(left, transparent 0%, transparent 49.89%, #fff 49.9%, #fff 50.1%, transparent 50.11%, transparent 100%));
+/* 		@include background-image(linear-gradient(left, transparent 0%, transparent 49.89%, #fff 49.9%, #fff 50.1%, transparent 50.11%, transparent 100%)); */
+		background: #f2f2f2 url("../img/timeline.png") repeat-y center;
+		padding-top: 0;
 		@include breakpoint(small-desk) {font-size: 90%; }
 	}
 	
@@ -767,7 +793,7 @@ textarea {
 		height: 100%;
 		border-radius: 5px;
 		@include breakpoint(tablet) {border-radius: 5px 0px 0px 0px;}
-		@include breakpoint(mobile) {border-radius: 5px 5px 0px 0px;}
+		@include breakpoint(mobile) {border-radius: 5px 5px 0px 0px; border-bottom: 1px solid #6d6d6d; }
 	}
 	
 	.info-arrow-left {
@@ -901,6 +927,40 @@ textarea {
 	
 	.detail.left a:last-child  {
 		@include breakpoint(tablet) {margin-right: 0; }
+	}
+	
+	
+	.rslides {
+		position: relative;
+		list-style: none;
+		overflow: hidden;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+
+	.rslides li {
+		-webkit-backface-visibility: hidden;
+		position: absolute;
+		display: none;
+		width: 100%;
+		left: 0;
+		top: 0;
+		margin: 0;
+	}
+
+	.rslides li:first-child {
+		position: relative;
+		display: block;
+		float: left;
+	}
+
+	.rslides img {
+		display: block;
+		height: auto;
+		float: left;
+		width: 100%;
+		border: 0;
 	}
 	
 /* !Gallery

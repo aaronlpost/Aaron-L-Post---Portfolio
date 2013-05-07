@@ -21,6 +21,8 @@ $(document).ready(function() {
 
 $(document).ready(function(){
 	// Cache the Window object
+$("img.lazy").lazyload({effect : "fadeIn"});
+
 	var $window = $(window);
 
       $(window).scroll(function() {
@@ -50,18 +52,24 @@ $(document).ready(function(){
 		//$('.img-overlay').css({"opacity":"1" });
 		}
 
+		    $("#fitvid").fitVids();
+		    
+
+
 }); // window scroll Ends
 
 jQuery.easing.def = "easeInOutCubic";
-$("#night-trigger").hover( function() { $("#night").fadeToggle(); } );
-$("#eyes-trigger").hover( function() { $("#eyes").fadeToggle(); } );
-$("#autumn-trigger").hover( function() { $("#autumn").fadeToggle(); } );
-$("#cast-trigger").hover( function() { $("#cast").fadeToggle(); } );
-$("#flight-trigger").hover( function() { $("#flight").fadeToggle(); } );
-$("#bridge-trigger").hover( function() { $("#bridge").fadeToggle(); } );
-$("#beth-trigger").hover( function() { $("#beth").fadeToggle(); } );
-$("#fred-trigger").hover( function() { $("#fred").fadeToggle(); } );
-$("#aaron-trigger").hover( function() { $("#aaron").fadeToggle(); } );
+$("#night-trigger").hover( function() { $("#night img").attr("src", $("#night img").attr("data-original")); $("#night img").removeAttr("data-original"); $("#night").fadeToggle(); } );
+$("#eyes-trigger").hover( function() { $("#eyes img").attr("src", $("#eyes img").attr("data-original")); $("#eys img").removeAttr("data-original"); $("#eyes").fadeToggle(); } );
+$("#autumn-trigger").hover( function() { $("#autumn img").attr("src", $("#autumn img").attr("data-original")); $("#autumn img").removeAttr("data-original"); $("#autumn").fadeToggle(); } );
+$("#cast-trigger").hover( function() { $("#cast img").attr("src", $("#cast img").attr("data-original")); $("#cast img").removeAttr("data-original"); $("#cast").fadeToggle(); } );
+$("#flight-trigger").hover( function() { $("#flight img").attr("src", $("#flight img").attr("data-original")); $("#flight img").removeAttr("data-original"); $("#flight").fadeToggle(); } );
+$("#bridge-trigger").hover( function() { $("#bridge img").attr("src", $("#bridge img").attr("data-original")); $("#bridge img").removeAttr("data-original"); $("#bridge").fadeToggle(); } );
+$("#beth-trigger").hover( function() { $("#beth img").attr("src", $("#beth img").attr("data-original")); $("#beth img").removeAttr("data-original"); $("#beth").fadeToggle(); } );
+$("#fred-trigger").hover( function() { $("#fred img").attr("src", $("#fred img").attr("data-original")); $("#fred img").removeAttr("data-original"); $("#fred").fadeToggle(); } );
+$("#aaron-trigger").hover( function() { $("#aaron img").attr("src", $("#aaron img").attr("data-original")); $("#aaron img").removeAttr("data-original"); $("#aaron").fadeToggle(); } );
+$(".rslides").responsiveSlides();
+
 
 });
 

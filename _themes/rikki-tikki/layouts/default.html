@@ -10,14 +10,12 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
+
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link rel="shortcut icon" href="http://aaronlpost.com/favicon.ico">     
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://aaronlpost.com/assets/img/icon.png" />   
         <link rel="stylesheet" href="{{ theme:css src='main.css'}}">
         <link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,400italic|Vollkorn:400italic,400' rel='stylesheet' type='text/css'>
-
-        <script src="{{ theme:js src='vendor/modernizr-2.6.2.min.js' }}"></script>  
-	  
 	</head>
     <body>
         <!--[if lt IE 7]>
@@ -45,25 +43,14 @@
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-        <script src="{{ theme:js src='parallax.js' }}"></script>
-        <script src="{{ theme:js src='jquery.fitvids.js' }}"></script>
-        <script src="{{ theme:js src='jquery.cycle2.min.js' }}"></script>
-        <script src="{{ theme:js src='jquery.easing.min.js' }}"></script>
-        <script src="{{ theme:js src='plugins.js' }}"></script>
-        <script src="{{ theme:js src='main.js' }}"></script>
-
+        <script src="{{ theme:js src='main-ck.js' }}"></script>
 
         <script>
             var _gaq=[['_setAccount','UA-38220841-1'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            g.src='//www.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
-		<script>
-		  $(document).ready(function(){
-		    // Target your .container, .wrapper, .post, etc.
-		    $("#fitvid").fitVids();
-		  });
-		</script>
+
     </body>
 </html>

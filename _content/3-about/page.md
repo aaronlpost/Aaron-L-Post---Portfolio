@@ -1,6 +1,7 @@
 ---
 title: About
 status: live
+_layout: about
 _template: about
 ---
 Bacon ipsum dolor sit amet bresaola ham sausage, tri-tip flank corned beef andouille jowl pig ham hock. Hamburger strip steak pork loin pork belly, ham tenderloin meatball boudin swine cow fatback pancetta. Boudin bresaola tail, ground round sausage jerky turkey ball tip swine capicola sirloin. Turkey kielbasa capicola tenderloin, venison pancetta meatball ham hock shank shankle meatloaf salami chuck flank biltong.
