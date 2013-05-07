@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{ _site_name }} ★ {{ title }}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="shortcut icon" href="http://aaronlpost.com/favicon.ico">     
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://aaronlpost.com/assets/img/icon.png" />   
+        <link rel="stylesheet" href="{{ theme:css src='main.css'}}">
+        <link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,400italic|Vollkorn:400italic,400' rel='stylesheet' type='text/css'>
+	</head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="wrapper">
+        <header class="clearfix">
+        	<h1 id="logo" class="hide-text">
+				<a href="{{ homepage }}">Aaron L. Post <span></span></a>
+			</h1><!-- logo -->
+	        <nav>
+		        <ul id="nav">
+			        {{ nav from="/" }}
+			        <li><a href="{{ url }}"{{ if is_current || is_parent }} class="current"{{ endif }}>{{ title }}</a></li>
+			        {{ /nav }}
+				</ul><!-- main-nav --> 
+	        </nav>
+        </header>
+        
+        {{ layout_content }}
+        <footer>
+			<p>Handcrafted in Texas<a href="#"><span aria-hidden="true" data-icon="&#xe002;"></span></a>&copy 2013 Aaron L. Post</p>
+		</footer>
+        </div><!-- wrapper -->
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+        <script src="{{ theme:js src='main-ck.js' }}"></script>
+
+        <script>
+            var _gaq=[['_setAccount','UA-38220841-1'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src='//www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+
+    </body>
+</html>
