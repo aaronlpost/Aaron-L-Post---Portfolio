@@ -368,6 +368,8 @@ textarea {
 	    }
 	}
 		
+
+
 /* !Article
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   */
 	.article-image {
@@ -643,6 +645,35 @@ textarea {
 	
 /* !About
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   */	
+	h2.overlay-title {
+		font-size: 4em;
+		position: absolute;
+		top: 40%;
+		margin-left: 1em;
+		color: #fff;
+		text-shadow: 0 0 20px #000;
+		@include breakpoint(tablet) {font-size: 3em; }
+		@include breakpoint(mobile) {margin-left: .5em; top: auto; bottom: 0; text-shadow: 0 0 6px #000; margin-bottom: .25em; }
+	}
+	
+	.italic {
+		font-style: italic;
+		font-size: .6em;
+		display: block;
+		margin-left: 1.5em;
+		text-shadow: 0 0 10px #000;
+		@include breakpoint(mobile) {text-shadow: 0 0 6px #000; }
+	}
+
+	.homepage p {
+		text-align: left;
+		margin-bottom: 1.74375em;
+	}
+	
+	.homepage a {
+		display: inline;
+	}
+
 	.title-words {
 		width: 11.5em;
 		margin: 0 auto; 
@@ -725,6 +756,8 @@ textarea {
 		font-size: 1em;
 	}
 		
+
+
 
 /* !Timeline
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   */	

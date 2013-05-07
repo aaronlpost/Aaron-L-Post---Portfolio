@@ -1,4 +1,5 @@
 ---
-title: Home
-_fieldset: page
+title: About
+status: live
+_template: about
 ---
