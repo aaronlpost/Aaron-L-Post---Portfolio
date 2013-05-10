@@ -21,7 +21,7 @@ $(document).ready(function() {
 
 $(document).ready(function(){
 	// Cache the Window object
-$("img.lazy").lazyload({effect : "fadeIn"});
+$("img.lazy").lazyload({threshold : 200, effect : "fadeIn"});
 
 	var $window = $(window);
 
@@ -52,7 +52,6 @@ $("img.lazy").lazyload({effect : "fadeIn"});
 		//$('.img-overlay').css({"opacity":"1" });
 		}
 
-		    $("#fitvid").fitVids();
 		    
 
 
@@ -69,7 +68,12 @@ $("#beth-trigger").hover( function() { $("#beth img").attr("src", $("#beth img")
 $("#fred-trigger").hover( function() { $("#fred img").attr("src", $("#fred img").attr("data-original")); $("#fred img").removeAttr("data-original"); $("#fred").fadeToggle(); } );
 $("#aaron-trigger").hover( function() { $("#aaron img").attr("src", $("#aaron img").attr("data-original")); $("#aaron img").removeAttr("data-original"); $("#aaron").fadeToggle(); } );
 $(".rslides").responsiveSlides();
-
+$("a[title]").qtip({position: {
+		my: 'top center',  
+		at: 'bottom center', 
+		target: $('.soon') 
+	}})
+$("#fitvid").fitVids();
 
 });
 

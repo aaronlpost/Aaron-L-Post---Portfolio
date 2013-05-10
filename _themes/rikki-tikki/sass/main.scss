@@ -367,7 +367,9 @@ textarea {
 	        opacity: 0;
 	    }
 	}
-		
+
+
+
 
 
 /* !Article
@@ -668,16 +670,27 @@ textarea {
 	.homepage p {
 		text-align: left;
 		margin-bottom: 1.74375em;
+		-ms-word-break: break-all;
+		word-break: break-all;
+		/* Non standard for webkit */
+		word-break: break-word;
+		-webkit-hyphens: auto;
+		-moz-hyphens: auto;
+        hyphens: auto;
 	}
 	
 	.homepage a {
 		display: inline;
 	}
+	
+	.homepage {
+		padding-bottom: 0;
+	}
 
 	.title-words {
 		width: 11.5em;
 		margin: 0 auto; 
-		padding: 1.5em 0;
+		padding: 1em 0 1.5em 0;
 		background-color: #f2f2f2;
 		@include breakpoint(mobile) {font-size: 1.75em; width: 11.75em; }
 	}
@@ -765,6 +778,7 @@ textarea {
 /* 		@include background-image(linear-gradient(left, transparent 0%, transparent 49.89%, #fff 49.9%, #fff 50.1%, transparent 50.11%, transparent 100%)); */
 		background: #f2f2f2 url("../img/timeline.png") repeat-y center;
 		padding-top: 0;
+		border: none;
 		@include breakpoint(small-desk) {font-size: 90%; }
 	}
 	
@@ -1316,5 +1330,76 @@ textarea {
     }
 }
 
+/*!
+ * qTip2 - Pretty powerful tooltips - v2.0.1
+ * http://qtip2.com
+ *
+ * Copyright (c) 2012 Craig Michael Thompson
+ * Released under the MIT, GPL licenses
+ * http://jquery.org/license
+ *
+ * Date: Mon Dec 31 2012 02:55 GMT+0000
+ * Plugins: svg ajax tips modal viewport imagemap ie6
+ * Styles: basic css3
+ */
 
-	   
+/* Core qTip styles */
+.qtip, .qtip{
+	position: absolute;
+	left: -28000px;
+	top: -28000px;
+	display: none;
+
+	max-width: 280px;
+	min-width: 50px;
+	
+	font-size: 10.5px;
+	line-height: 12px;
+
+	direction: ltr;
+}
+
+	.qtip-content{
+		position: relative;
+		padding: 5px 9px;
+		overflow: hidden;
+
+		text-align: left;
+		word-wrap: break-word;
+	}
+
+/* Default tooltip style */
+.qtip-default{
+	border-radius: 5px;
+	font-family: "Vollkorn", serif;
+	font-size: .9em;
+	background-color: #000;
+	color: #fff;
+	padding: 8px;
+	border: 1px #222 solid;
+}
+
+
+/* Tips plugin */
+.qtip .qtip-tip{
+	margin: 0 auto;
+	overflow: hidden;
+	z-index: 10;
+}
+
+	.qtip .qtip-tip,
+	.qtip .qtip-tip .qtip-vml{
+		position: absolute;
+
+		color: #000;
+		background: transparent;
+		border: 0 dashed transparent;
+	}
+	
+	.qtip .qtip-tip canvas{ top: 0; left: 0; }
+
+	.qtip .qtip-tip .qtip-vml{
+		behavior: url(#default#VML);
+		display: inline-block;
+		visibility: visible;
+	}
