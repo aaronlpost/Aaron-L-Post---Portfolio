@@ -1,0 +1,71 @@
+@import 'bourbon';
+
+@mixin breakpoint($point) {
+  @if $point == large-desk {
+    @media (min-width: 79.125em) { @content; }
+  }
+  @else if $point == small-desk {
+    @media (max-width: 68em) { @content; }
+  }
+  @else if $point == tablet {
+    @media (max-width: 55em)  { @content; }
+  }
+  @else if $point == mobile {
+    @media (max-width: 44em)  { @content; }
+  }
+}
+
+p, a, h1, h2, h3 {
+	font-family: 'Comic Sans', 'Comic Sans MS', 'Chalkboard', 'ChalkboardSE-Regular', 'Marker Felt', 'Purisa', 'URW Chancery L', cursive !important;
+}
+
+::-moz-selection {
+    background: #ff77c2;
+    text-shadow: none;
+}
+
+::selection {
+    background: #ff77c2;
+    text-shadow: none;
+}
+
+    nav ul li a:hover, nav ul li a:active {
+	    background: #35396c;
+    }
+
+.homepage-title {
+	margin-bottom: 10px;
+	font-size: .5em;
+	margin-left: 2em;
+}
+
+.overlay-title {
+	width: 20%;
+	@include breakpoint(mobile) {width: 100%; }
+}
+
+.big-button {
+	font-size: 3em;
+	display: block !important;
+	margin: 0 auto;
+	width: 50%;
+	padding: 1em;
+	color: #fff !important;
+	background: #35396c;
+	text-shadow: 1px 1px 2px #000;
+	border-radius: 10px;
+	box-shadow: 1px 3px 10px #7c7c7c;
+}
+
+.big-button:hover {
+	background-color: #232657;
+	text-shadow: 1px 1px 3px #000;
+}
+
+.big-button:active {
+	background-color: #343b9d;
+}
+
+body {
+	background: url("../img/plaid.jpg");
+}

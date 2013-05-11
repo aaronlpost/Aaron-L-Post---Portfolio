@@ -23,3 +23,4 @@ if (capturing) {
     // Execute polyfill on document
     polyfillPictureElement(window, document);
 }
+
