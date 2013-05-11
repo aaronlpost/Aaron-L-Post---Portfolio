@@ -55,6 +55,8 @@ p, a, h1, h2, h3 {
 	text-shadow: 1px 1px 2px #000;
 	border-radius: 10px;
 	box-shadow: 1px 3px 10px #7c7c7c;
+	@include breakpoint(mobile) {font-size: 2em; }
+
 }
 
 .big-button:hover {
