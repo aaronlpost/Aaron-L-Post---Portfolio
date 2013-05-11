@@ -20,8 +20,10 @@ $(document).ready(function() {
 */
 
 $(document).ready(function(){
+  $(".image-popup").magnificPopup({type:"image"});
+  $(".lazy").lazyload({threshold : 200, effect : "fadeIn"});
+
 	// Cache the Window object
-$("img.lazy").lazyload({threshold : 200, effect : "fadeIn"});
 
 	var $window = $(window);
 

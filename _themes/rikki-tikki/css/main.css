@@ -2122,3 +2122,465 @@ footer a {
   behavior: url(#default#VML);
   display: inline-block;
   visibility: visible; }
+
+/* Magnific Popup CSS */
+/* line 1494, ../sass/main.scss */
+.mfp-bg {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 502;
+  overflow: hidden;
+  position: fixed;
+  background: #0b0b0b;
+  opacity: 0.8;
+  filter: alpha(opacity=80); }
+
+/* line 1511, ../sass/main.scss */
+.mfp-wrap {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 503;
+  position: fixed;
+  outline: none !important;
+  -webkit-backface-visibility: hidden; }
+
+/* line 1523, ../sass/main.scss */
+.mfp-container {
+  height: 100%;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  padding: 0 8px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 1538, ../sass/main.scss */
+.mfp-container:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle; }
+
+/* line 1546, ../sass/main.scss */
+.mfp-align-top .mfp-container:before {
+  display: none; }
+
+/* line 1551, ../sass/main.scss */
+.mfp-content {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 auto;
+  text-align: left;
+  z-index: 505; }
+
+/* line 1560, ../sass/main.scss */
+.mfp-inline-holder .mfp-content,
+.mfp-ajax-holder .mfp-content {
+  width: 100%;
+  cursor: auto; }
+
+/* line 1566, ../sass/main.scss */
+.mfp-ajax-cur {
+  cursor: progress; }
+
+/* line 1570, ../sass/main.scss */
+.mfp-zoom-out-cur,
+.mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+  cursor: -moz-zoom-out;
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out; }
+
+/* line 1575, ../sass/main.scss */
+.mfp-zoom {
+  cursor: pointer;
+  cursor: -webkit-zoom-in;
+  cursor: -moz-zoom-in;
+  cursor: zoom-in; }
+
+/* line 1581, ../sass/main.scss */
+.mfp-auto-cursor .mfp-content {
+  cursor: auto; }
+
+/* line 1588, ../sass/main.scss */
+.mfp-close,
+.mfp-arrow,
+.mfp-preloader,
+.mfp-counter {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none; }
+
+/* line 1595, ../sass/main.scss */
+.mfp-loading.mfp-figure {
+  display: none; }
+
+/* line 1600, ../sass/main.scss */
+.mfp-hide {
+  display: none !important; }
+
+/* line 1611, ../sass/main.scss */
+.mfp-preloader {
+  color: #cccccc;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  text-align: center;
+  margin-top: -0.8em;
+  left: 8px;
+  right: 8px;
+  z-index: 504; }
+
+/* line 1622, ../sass/main.scss */
+.mfp-preloader a {
+  color: #cccccc; }
+
+/* line 1625, ../sass/main.scss */
+.mfp-preloader a:hover {
+  color: white; }
+
+/* line 1630, ../sass/main.scss */
+.mfp-s-ready .mfp-preloader {
+  display: none; }
+
+/* line 1635, ../sass/main.scss */
+.mfp-s-error .mfp-content {
+  display: none; }
+
+/* line 1642, ../sass/main.scss */
+button.mfp-close,
+button.mfp-arrow {
+  overflow: visible;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+  display: block;
+  padding: 0;
+  z-index: 506; }
+
+/* line 1652, ../sass/main.scss */
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+/* line 1659, ../sass/main.scss */
+.mfp-close {
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-decoration: none;
+  text-align: center;
+  opacity: 0.65;
+  padding: 0 0 18px 10px;
+  color: white;
+  font-style: normal;
+  font-size: 28px;
+  font-family: Arial, Baskerville, monospace; }
+  /* line 1678, ../sass/main.scss */
+  .mfp-close:hover, .mfp-close:focus {
+    opacity: 1; }
+  /* line 1682, ../sass/main.scss */
+  .mfp-close:active {
+    top: 1px; }
+
+/* line 1686, ../sass/main.scss */
+.mfp-close-btn-in .mfp-close {
+  color: #333333; }
+
+/* line 1690, ../sass/main.scss */
+.mfp-image-holder .mfp-close,
+.mfp-iframe-holder .mfp-close {
+  color: white;
+  right: -6px;
+  text-align: right;
+  padding-right: 6px;
+  width: 100%; }
+
+/* line 1699, ../sass/main.scss */
+.mfp-counter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #cccccc;
+  font-size: 12px;
+  line-height: 18px; }
+
+/* line 1710, ../sass/main.scss */
+.mfp-arrow {
+  position: absolute;
+  top: 0;
+  opacity: 0.65;
+  margin: 0;
+  top: 50%;
+  margin-top: -55px;
+  padding: 0;
+  width: 90px;
+  height: 110px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+/* line 1722, ../sass/main.scss */
+.mfp-arrow:active {
+  margin-top: -54px; }
+
+/* line 1726, ../sass/main.scss */
+.mfp-arrow:hover,
+.mfp-arrow:focus {
+  opacity: 1; }
+
+/* line 1735, ../sass/main.scss */
+.mfp-arrow:before, .mfp-arrow:after,
+.mfp-arrow .mfp-b,
+.mfp-arrow .mfp-a {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: 35px;
+  margin-left: 35px;
+  border: solid transparent; }
+/* line 1749, ../sass/main.scss */
+.mfp-arrow:after,
+.mfp-arrow .mfp-a {
+  opacity: 0.8;
+  border-top-width: 12px;
+  border-bottom-width: 12px;
+  top: 8px; }
+/* line 1757, ../sass/main.scss */
+.mfp-arrow:before,
+.mfp-arrow .mfp-b {
+  border-top-width: 20px;
+  border-bottom-width: 20px; }
+
+/* line 1764, ../sass/main.scss */
+.mfp-arrow-left {
+  left: 0; }
+  /* line 1768, ../sass/main.scss */
+  .mfp-arrow-left:after,
+  .mfp-arrow-left .mfp-a {
+    border-right: 12px solid #000;
+    left: 5px; }
+  /* line 1773, ../sass/main.scss */
+  .mfp-arrow-left:before,
+  .mfp-arrow-left .mfp-b {
+    border-right: 20px solid #FFF; }
+
+/* line 1778, ../sass/main.scss */
+.mfp-arrow-right {
+  right: 0; }
+  /* line 1781, ../sass/main.scss */
+  .mfp-arrow-right:after,
+  .mfp-arrow-right .mfp-a {
+    border-left: 12px solid #000;
+    left: 3px; }
+  /* line 1786, ../sass/main.scss */
+  .mfp-arrow-right:before,
+  .mfp-arrow-right .mfp-b {
+    border-left: 20px solid #FFF; }
+
+/* line 1796, ../sass/main.scss */
+.mfp-iframe-holder {
+  padding-top: 40px;
+  padding-bottom: 40px; }
+
+/* line 1800, ../sass/main.scss */
+.mfp-iframe-holder .mfp-content {
+  line-height: 0;
+  width: 100%;
+  max-width: 900px; }
+
+/* line 1805, ../sass/main.scss */
+.mfp-iframe-scaler {
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  padding-top: 56.25%; }
+
+/* line 1811, ../sass/main.scss */
+.mfp-iframe-scaler iframe {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  background: black; }
+
+/* line 1820, ../sass/main.scss */
+.mfp-iframe-holder .mfp-close {
+  top: -43px; }
+
+/* Main image in popup */
+/* line 1833, ../sass/main.scss */
+img.mfp-img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  line-height: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 40px 0 40px;
+  margin: 0 auto; }
+
+/* The shadow behind the image */
+/* line 1847, ../sass/main.scss */
+.mfp-figure:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 40px;
+  bottom: 40px;
+  display: block;
+  right: 0;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6); }
+
+/* line 1860, ../sass/main.scss */
+.mfp-figure {
+  line-height: 0; }
+
+/* line 1863, ../sass/main.scss */
+.mfp-bottom-bar {
+  margin-top: -36px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  cursor: auto; }
+
+/* line 1871, ../sass/main.scss */
+.mfp-title {
+  text-align: left;
+  line-height: 18px;
+  color: #f3f3f3; }
+
+/* line 1877, ../sass/main.scss */
+.mfp-figure small {
+  color: #bdbdbd;
+  display: block;
+  font-size: 12px;
+  line-height: 14px; }
+
+/* line 1883, ../sass/main.scss */
+.mfp-image-holder .mfp-content {
+  max-width: 100%; }
+
+/* line 1887, ../sass/main.scss */
+.mfp-gallery .mfp-image-holder .mfp-figure {
+  cursor: pointer; }
+
+@media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {
+  /**
+   * Remove all paddings around the image on small screen
+   */
+  /* line 1898, ../sass/main.scss */
+  .mfp-img-mobile .mfp-image-holder {
+    padding-left: 0;
+    padding-right: 0; }
+
+  /* line 1902, ../sass/main.scss */
+  .mfp-img-mobile img.mfp-img {
+    padding: 0; }
+
+  /* The shadow behind the image */
+  /* line 1906, ../sass/main.scss */
+  .mfp-img-mobile .mfp-figure:after {
+    top: 0;
+    bottom: 0; }
+
+  /* line 1911, ../sass/main.scss */
+  .mfp-img-mobile .mfp-bottom-bar {
+    background: rgba(0, 0, 0, 0.6);
+    bottom: 0;
+    margin: 0;
+    top: auto;
+    padding: 3px 5px;
+    position: fixed;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
+  /* line 1922, ../sass/main.scss */
+  .mfp-img-mobile .mfp-bottom-bar:empty {
+    padding: 0; }
+
+  /* line 1925, ../sass/main.scss */
+  .mfp-img-mobile .mfp-counter {
+    right: 5px;
+    top: 3px; }
+
+  /* line 1929, ../sass/main.scss */
+  .mfp-img-mobile .mfp-close {
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    text-align: center;
+    padding: 0; }
+
+  /* line 1940, ../sass/main.scss */
+  .mfp-img-mobile .mfp-figure small {
+    display: inline;
+    margin-left: 5px; } }
+@media all and (max-width: 800px) {
+  /* line 1953, ../sass/main.scss */
+  .mfp-arrow {
+    -webkit-transform: scale(0.75);
+    transform: scale(0.75); }
+
+  /* line 1957, ../sass/main.scss */
+  .mfp-arrow-left {
+    -webkit-transform-origin: 0;
+    transform-origin: 0; }
+
+  /* line 1961, ../sass/main.scss */
+  .mfp-arrow-right {
+    -webkit-transform-origin: 100%;
+    transform-origin: 100%; }
+
+  /* line 1965, ../sass/main.scss */
+  .mfp-container {
+    padding-left: 6px;
+    padding-right: 6px; } }
+/* line 1976, ../sass/main.scss */
+.mfp-ie7 .mfp-img {
+  padding: 0; }
+/* line 1979, ../sass/main.scss */
+.mfp-ie7 .mfp-bottom-bar {
+  width: 600px;
+  left: 50%;
+  margin-left: -300px;
+  margin-top: 5px;
+  padding-bottom: 5px; }
+/* line 1986, ../sass/main.scss */
+.mfp-ie7 .mfp-container {
+  padding: 0; }
+/* line 1989, ../sass/main.scss */
+.mfp-ie7 .mfp-content {
+  padding-top: 44px; }
+/* line 1992, ../sass/main.scss */
+.mfp-ie7 .mfp-close {
+  top: 0;
+  right: 0;
+  padding-top: 0; }
