@@ -468,7 +468,7 @@ textarea {
 	    	text-align: center;
 		}
 		p {
-			width: 83%%;
+			width: 83%;
 			margin: 0 auto;
 			float: none;
 			text-align: center;
@@ -494,6 +494,18 @@ textarea {
 		@extend .article-image;
 		margin-bottom: 0;
 		@include breakpoint(mobile) {width: 100%; margin-bottom: 0; }
+	}
+	
+	.portfolio-title {
+		text-align: center;
+		font-size: 2em;
+		padding: .5em;
+		margin-bottom: 0;
+		color: #fff;
+		text-shadow: 0px 0px 3px #000;
+		background: #181818;
+		box-shadow: inset 0px 0px 7px #000;
+        @include breakpoint(mobile) {font-size: 1.5em; }
 	}
 		
 	.hero-title {
@@ -526,7 +538,7 @@ textarea {
 	.hero-type {
 		background-color: rgba(204,68,0,0.9);
 		border-bottom-right-radius: 6px;
-	    @include breakpoint(mobile) {border-top-right-radius: 6px;}
+	    @include breakpoint(mobile) {background-color: rgb(204,68,0);}
 	}
 	
 	.hero-section {
@@ -536,7 +548,7 @@ textarea {
 		
 	.parallax {
         height: 0;
-        padding-bottom: 161.6%; /* Proportional scaling of height */
+        padding-bottom: 154%; /* Proportional scaling of height */
 	    @include breakpoint(mobile) {padding-bottom: 44%;}
         position: relative;
         overflow: hidden;
@@ -558,7 +570,7 @@ textarea {
 	        @include background-image(linear-gradient(left, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 100%));
 /* 	        @include breakpoint(tablet) {@include background-image(linear-gradient(left, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.75) 8%, rgba(0,0,0,0.75) 92%, rgba(0,0,0,0.8) 100%))}; */
 	        @include breakpoint(mobile) {background-image: none; background-color: #000;};
-	        padding-top: 55%;
+	        padding-top: 65%;
 	        position: absolute;
 	        z-index: 1000;
 	        @include breakpoint(mobile) {width: 34%; padding-left: 0; padding-right: 0; padding-top: 12.5%;}
@@ -660,6 +672,9 @@ textarea {
 	
 	.italic {
 		font-style: italic;
+	}
+
+	.homepage-title {
 		font-size: .6em;
 		display: block;
 		margin-left: 1.5em;
@@ -669,7 +684,7 @@ textarea {
 
 	.homepage p {
 		text-align: left;
-		margin-bottom: 1.74375em;
+		margin-bottom: 1.55em;
 		-ms-word-break: break-all;
 		word-break: break-all;
 		/* Non standard for webkit */
@@ -690,7 +705,7 @@ textarea {
 	.title-words {
 		width: 11.5em;
 		margin: 0 auto; 
-		padding: 1em 0 1.5em 0;
+		padding: .775em 0;
 		background-color: #f2f2f2;
 		@include breakpoint(mobile) {font-size: 1.75em; width: 11.75em; }
 	}
