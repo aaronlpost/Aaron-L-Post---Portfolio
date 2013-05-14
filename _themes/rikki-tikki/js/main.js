@@ -75,8 +75,6 @@ $("a[title]").qtip({position: {
 		at: 'bottom center', 
 		target: $('.soon') 
 	}})
-$("#fitvid").fitVids();
-videojs.options.flash.swf="http://aaronlpost.com/_themes/rikki-tikki/js/to/video-js.swf";
 });
 
 
