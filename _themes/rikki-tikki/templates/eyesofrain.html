@@ -1,6 +1,6 @@
-        <article class="nopadding clearfix">
+        <article role="main" class="nopadding clearfix">
             <div id="fitvid" class="article-image">
-            <div onclick="thevid=document.getElementById('thevideo'); thevid.style.display='block'; this.style.display='none'"><img src="{{_site_root}}assets/img/eyesofrain-vidcover.jpg" style="cursor:pointer" /></div><div id="thevideo" style="display:none"><iframe width="1280" height="720" src="http://www.youtube.com/embed/_uEwvTW1mPI?rel=0&showinfo=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
+            <div onclick="thevid=document.getElementById('thevideo'); thevid.style.height='100%'; this.style.display='none'"><img src="{{_site_root}}assets/img/eyesofrain-vidcover.jpg" style="cursor:pointer" /></div><div id="thevideo" style="height:0; overflow:hidden"><iframe width="1280" height="720" src="http://www.youtube.com/embed/_uEwvTW1mPI?rel=0&showinfo=0&autoplay=0" frameborder="0" allowfullscreen></iframe>
             </div></div>
         	<header class="portfolio-header">
         		<a href="http://youtu.be/_uEwvTW1mPI"><h2>Eyes of Rain</h2></a>
@@ -10,10 +10,20 @@
 				<iframe class="right map" height='300' frameBorder='0' src='http://a.tiles.mapbox.com/v3/trooz1.map-g0mxv70b.html#5/41.89857973456335/12.476810216903676'></iframe>   
 				</div>
 			</header>
+			<section class="brief half clearfix">
+				<ul class="left rslides">
+		            <li><img src="{{_site_root}}assets/img/raindrop1.jpg" ></li>
+		            <li><img src="{{_site_root}}assets/img/raindrop2.jpg" ></li>
+		            <li><img src="{{_site_root}}assets/img/raindrop3.jpg" ></li>
+		            <li><img src="{{_site_root}}assets/img/raindrop4.jpg" ></li>
+		            <li><img src="{{_site_root}}assets/img/raindrop5.jpg" ></li>
+		        </ul> 
+				<p class="right">Created in my senior year at Kansas State University, <i>Eyes of Rain</i> follows the journey of a raindrop from the clouds through the oculus of the Roman Pantheon. The rain subsides and a reflection in the fallen drop reveals the sun sweeping across the dome. Still images, such as the floor of the Pantheon, were rendered once in 3DS Max and heavily edited in Photoshop. Separate animations of the sun and rain were also rendered in 3DS Max and combined with the still images in After Effects. Such compositing resulted in a dramatic cut in rendering times.</p>
+			</section>  
         </article>
         
-        <nav id="pagination" class="clearfix">
-        	<a href="{{_site_root}}portfolio/autumnrain">Next, check out Autumn Rain &rarr;</a>
+        <nav role="navigation" id="pagination" class="clearfix">
+        	<a href="{{_site_root}}portfolio/autumnrain">Next, check out <i>Autumn Rain</i> &rarr;</a>
         	<p></p>
         </nav>
 

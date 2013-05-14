@@ -1,6 +1,6 @@
-        <article class="nopadding clearfix">
+        <article role="main" class="nopadding clearfix">
             <div id="fitvid" class="article-image">
-	            <div onclick="thevid=document.getElementById('thevideo'); thevid.style.display='block'; this.style.display='none'"><img src="{{_site_root}}assets/img/autumnrain-vidcover.jpg" style="cursor:pointer" /></div><div id="thevideo" style="display:none"><iframe width="1280" height="720" src="http://www.youtube.com/embed/kL8oavPV77k?rel=0&showinfo=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
+	            <div onclick="thevid=document.getElementById('thevideo'); thevid.style.height='100%'; this.style.display='none'"><img src="{{_site_root}}assets/img/autumnrain-vidcover.jpg" style="cursor:pointer" /></div><div id="thevideo" style="height:0; overflow:hidden"><iframe width="1280" height="720" src="http://www.youtube.com/embed/kL8oavPV77k?rel=0&showinfo=0&autoplay=0" frameborder="0" allowfullscreen></iframe>
 	            </div></div>
 
         	<header class="portfolio-header">
@@ -11,9 +11,12 @@
 					<iframe class="right map" height='300' frameBorder='0' src='http://a.tiles.mapbox.com/v3/trooz1.map-f817jt79.html#5/36.200700000000005/-6.033599999999982'></iframe>   
 				</div>             	
 			</header>
+			<section class="brief center">
+			<p>The short film <i>Autumn Rain</i> was conceived as a study in how changes in time and season dramatically affect constructed spaces. All shots were composed and rendered in 3DS Max, color-corrected in After Effects, and edited in Premiere Pro.</p>
+			</section>
         </article>
         
-        <nav id="pagination" class="clearfix">
-        	<a href="{{_site_root}}portfolio/eyesofrain">Next, check out Eyes of Rain &rarr;</a>
+        <nav role="navigation" id="pagination" class="clearfix">
+        	<a href="{{_site_root}}portfolio/eyesofrain">Next, check out <i>Eyes of Rain</i> &rarr;</a>
         	<p></p>
         </nav>

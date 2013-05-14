@@ -178,7 +178,7 @@ textarea {
 	p {
 		font-size: 1.125em;
 		font-family: "Vollkorn", serif;
-		line-height: 1.55;
+		line-height: 1.5;
 		margin-top: 0;
 	}
 	
@@ -288,6 +288,10 @@ textarea {
 	    margin: 0 !important;
     }
     
+    .no-svg #logo {
+	    background:url("../img/logo2.png") no-repeat 0 0;
+    }
+    
     @include breakpoint(tablet) { 
   	header h1#logo {
 	  	float: none;
@@ -330,6 +334,10 @@ textarea {
 		-moz-transition:    opacity cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s;
 		-o-transition:      opacity cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s;
 	}
+	
+    .no-svg #logo span{
+	    display: none;
+    }
 
     #logo span:hover {
 		opacity: 1;	
@@ -455,7 +463,7 @@ textarea {
 		padding-bottom: 4.5em;
 		/* @include breakpoint(small-desk) {width: 70% ; } */ /* check */
 		@include breakpoint(tablet) {width: 82%; }
-		@include breakpoint(mobile) {padding-bottom: 3em; width: none; }
+		@include breakpoint(mobile) {padding-bottom: 3em; }
 		h2 {
 			font-family: "Sorts Mill Goudy", serif;	
 			margin-bottom: .1em;
@@ -507,6 +515,7 @@ textarea {
 		box-shadow: inset 0px 0px 7px #000;
         @include breakpoint(mobile) {font-size: 1.5em; }
 	}
+/*
 		
 	.hero-title {
 		position: absolute;
@@ -519,7 +528,7 @@ textarea {
 			margin-bottom: 0;
 			font-variant: small-caps;
 			letter-spacing: 1px;
-			text-rendering: auto; /* Fix ugly rendering bug(?) */
+			text-rendering: auto; 
 		}
 		p {
 			color: #000;
@@ -538,13 +547,27 @@ textarea {
 	.hero-type {
 		background-color: rgba(204,68,0,0.9);
 		border-bottom-right-radius: 6px;
-	    @include breakpoint(mobile) {background-color: rgb(204,68,0);}
+	    @include breakpoint(mobile) {background-color: rgb(204,68,0); width: 100%; padding: .65em 0; text-align: center; border-bottom-right-radius: 0;}
 	}
+*/
 	
-	.hero-section {
-		background-color: rgba(0,0,0,0.9);
-		z-index: 1;
-	}
+	.hero-title {
+		position: absolute;
+		z-index: 500;
+		color: #fff;
+		text-shadow: 1px 1px 3px #000;
+		line-height: 1;
+		font-size: 1.5em;
+		margin-bottom: 0;
+		font-variant: small-caps;
+		letter-spacing: 1px;
+		text-rendering: auto; /* Fix ugly rendering bug(?) */
+		background-color: rgba(204,68,0,0.9);
+		border-bottom-right-radius: 6px;
+		padding: .65em 1em;
+		box-shadow: 0 2px 9px rgba(0,0,0,0.4); 
+        @include breakpoint(mobile) {background-color: rgb(204,68,0); position: relative; padding: .65em 0; text-align: center; border-bottom-right-radius: 0; display: inline-block; width: 100%; font-size: 1.25em; }
+	}	
 		
 	.parallax {
         height: 0;
@@ -570,10 +593,16 @@ textarea {
 	        @include background-image(linear-gradient(left, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 100%));
 /* 	        @include breakpoint(tablet) {@include background-image(linear-gradient(left, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.75) 8%, rgba(0,0,0,0.75) 92%, rgba(0,0,0,0.8) 100%))}; */
 	        @include breakpoint(mobile) {background-image: none; background-color: #000;};
-	        padding-top: 65%;
+	        padding-top: 60%;
 	        position: absolute;
 	        z-index: 1000;
-	        @include breakpoint(mobile) {width: 34%; padding-left: 0; padding-right: 0; padding-top: 12.5%;}
+	        @include breakpoint(mobile) {width: 34%; padding-left: 0; padding-right: 0; padding-top: 12.5%;};
+	        font-family: "Sorts Mill Goudy", serif;	
+	        font-size: 1.5em;
+	        color: #fff;
+	        text-shadow: 1px 1px 3px #000;
+	        text-align: center;	   
+        	@include breakpoint(mobile) {font-size: 1em;}     
         }
         div img {
 	        width: 50%;
@@ -581,14 +610,10 @@ textarea {
 	        margin-left: auto;
 	        margin-right: auto;
         }
-        div h2 {
-	        font-size: 1.5em;
-	        color: #fff;
-	        text-shadow: 1px 1px 3px #000;
-	        text-align: center;	   
-	        margin-top: 1em;
-        	@include breakpoint(mobile) {font-size: 1em;}     
-        }
+    }
+    
+    .transparent {
+		@include breakpoint(mobile) {width: 100% !important; background-color: rgba(0,0,0,0.7) !important;};
     }
     
 	.portfolio-hero-half {
@@ -619,17 +644,35 @@ textarea {
 
     
     section.half {
-	    img, p {
+	    img, p, ul, h3 {
 		    width: 46%;
 		    margin: 0;
         	@include breakpoint(tablet) {width: 100%; }     
 	    }
-	    img {
+	    ul img {
+		    width: 100%;
+			@include breakpoint(tablet) {margin-bottom: 0;}     
+	    }
+	    img, ul {
 		    box-shadow: 0 3px 3px rgba(0,0,0,0.2);		
 			@include breakpoint(tablet) {margin-bottom: 3.5em;}     
 	    }
 	    margin-left: 8.5%;
 	    margin-right: 8.5%;
+    }
+    
+    section h3 {
+	    font-size: 2.25em;
+	    margin-bottom: 0;
+    }
+    
+    section.center h3 {
+	    text-align: center;
+		@include breakpoint(tablet) {text-align: left;}     
+    }
+    
+    section.center p {
+		@include breakpoint(tablet) {text-align: left; margin: 0;}     
     }
     
     .left {
@@ -999,6 +1042,7 @@ textarea {
 		width: 100%;
 		padding: 0;
 		margin: 0;
+		background: #000;
 	}
 
 	.rslides li {

@@ -16,17 +16,19 @@
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://aaronlpost.com/assets/img/icon.png" />   
         <link rel="stylesheet" href="{{ theme:css src='main.css'}}">
         <link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,400italic|Vollkorn:400italic,400' rel='stylesheet' type='text/css'>
+        
+        <script src="{{ theme:js src='vendor/modernizr-2.6.2.svg.js' }}"></script>
 	</head>
     <body>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
         <div class="wrapper">
-        <header class="clearfix">
+        <header role="banner" class="clearfix">
         	<h1 id="logo" class="hide-text">
 				<a href="{{ homepage }}">Aaron L. Post <span></span></a>
 			</h1><!-- logo -->
-	        <nav>
+	        <nav role="navigation">
 		        <ul id="nav">
 		        	<li><a href="{{ homepage }}">About</a></li>
 		        	<li><a href="{{_site_root}}portfolio">Portfolio</a></li>
@@ -43,8 +45,8 @@
         </header>
         
         {{ layout_content }}
-        <footer>
-			<p>Handcrafted in Texas<a href="#"><span aria-hidden="true" data-icon="&#xe002;"></span></a>&copy 2013 Aaron L. Post</p>
+        <footer role="contentinfo">
+			<p>Handcrafted in Texas<a href="#"><span aria-hidden="true" data-icon="&#xe002;"></span></a>&copy; 2013 Aaron L. Post</p>
 		</footer>
         </div><!-- wrapper -->
 
@@ -58,6 +60,12 @@
             g.src='//www.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
-
+        <script>
+			if(!Modernizr.svg) {
+			    $('img[src*="svg"]').attr('src', function() {
+			        return $(this).attr('src').replace('.svg', '.png');
+			    });
+			}
+		</script>
     </body>
 </html>
