@@ -1,9 +1,16 @@
-        <article role="main" class="nopadding clearfix">
-            <div id="fitvid" class="article-image">
-            <div onclick="thevid=document.getElementById('thevideo'); thevid.style.height='100%'; this.style.display='none'"><img src="{{_site_root}}assets/img/eyesofrain-vidcover.jpg" style="cursor:pointer" /></div><div id="thevideo" style="height:0; overflow:hidden"><iframe width="1280" height="720" src="http://www.youtube.com/embed/_uEwvTW1mPI?rel=0&showinfo=0&autoplay=0" frameborder="0" allowfullscreen></iframe>
-            </div></div>
+        <article role="main" itemscope itemtype="http://schema.org/VideoObject" class="nopadding clearfix">
+        
+				<video id="example_video_1" class="article-image video-js vjs-default-skin"
+					controls preload="auto" 
+					poster="{{_site_root}}assets/img/eyesofrain-vidcover2.jpg"
+					data-setup='{"example_option":true}'>
+					<source itemprop="video" src="{{_site_root}}assets/vid/eyesofrain.mp4" type='video/mp4' />
+					<source src="{{_site_root}}assets/vid/eyesofrain.webm" type='video/webm' />
+					<source src="{{_site_root}}assets/vid/eyesofrain.ogv" type='video/ogg' />
+				</video>
+				
         	<header class="portfolio-header">
-        		<a href="http://youtu.be/_uEwvTW1mPI"><h2>Eyes of Rain</h2></a>
+        		<a itemprop="url" href="http://youtu.be/_uEwvTW1mPI"><h2>Eyes of Rain</h2></a>
 				<div class="map-container">
 				<a href="#">Pantheon - Rome, Italy</a>
 				<iframe class="left map" height='300' frameBorder='0' src='http://a.tiles.mapbox.com/v3/trooz1.map-g0mxv70b.html#14/41.89857973456335/12.476810216903676'></iframe>
@@ -18,7 +25,9 @@
 		            <li><img src="{{_site_root}}assets/img/raindrop4.jpg" ></li>
 		            <li><img src="{{_site_root}}assets/img/raindrop5.jpg" ></li>
 		        </ul> 
-				<p class="right">Created in my senior year at Kansas State University, <i>Eyes of Rain</i> follows the journey of a raindrop from the clouds through the oculus of the Roman Pantheon. The rain subsides and a reflection in the fallen drop reveals the sun sweeping across the dome. Still images, such as the floor of the Pantheon, were rendered once in 3DS Max and heavily edited in Photoshop. Separate animations of the sun and rain were also rendered in 3DS Max and combined with the still images in After Effects. Such compositing resulted in a dramatic cut in rendering times.</p>
+				<p itemprop="description" class="right">Created in my senior year at Kansas State University, <i>Eyes of Rain</i> follows the journey of a raindrop from the clouds through the oculus of the Roman Pantheon. The rain subsides and a reflection in the fallen drop reveals the sun sweeping across the dome. Still images, such as the floor of the Pantheon, were rendered once in 3DS Max and heavily edited in Photoshop. Separate animations of the sun and rain were also rendered in 3DS Max and combined with the still images in After Effects. Such compositing resulted in a dramatic cut in rendering times.</p>
+			<meta itemprop="duration" content="PT1M20S" />
+			<meta itemprop="thumbnail" content="{{_site_root}}assets/img/eyesofrain-vidcover2.jpg" />
 			</section>  
         </article>
         

@@ -1,10 +1,16 @@
-        <article role="main" class="nopadding clearfix">
-            <div id="fitvid" class="article-image">
-	            <div onclick="thevid=document.getElementById('thevideo'); thevid.style.height='100%'; this.style.display='none'"><img src="{{_site_root}}assets/img/autumnrain-vidcover.jpg" style="cursor:pointer" /></div><div id="thevideo" style="height:0; overflow:hidden"><iframe width="1280" height="720" src="http://www.youtube.com/embed/kL8oavPV77k?rel=0&showinfo=0&autoplay=0" frameborder="0" allowfullscreen></iframe>
-	            </div></div>
+        <article role="main" itemscope itemtype="http://schema.org/VideoObject" class="nopadding clearfix">
+
+				<video id="example_video_1" class="article-image video-js vjs-default-skin"
+					controls preload="auto" 
+					poster="{{_site_root}}assets/img/autumnrain-vidcover2.jpg"
+					data-setup='{"example_option":true}'>
+					<source itemprop="video" src="{{_site_root}}assets/vid/autumnrain.mp4" type='video/mp4' />
+					<source src="{{_site_root}}assets/vid/autumnrain.webm" type='video/webm' />
+					<source src="{{_site_root}}assets/vid/autumnrain.ogv" type='video/ogg' />
+				</video>
 
         	<header class="portfolio-header">
-        		<a href="http://youtu.be/kL8oavPV77k"><h2>Autumn Rain</h2></a>
+        		<a itemprop="url" href="http://youtu.be/kL8oavPV77k"><h2 itemprop="name">Autumn Rain</h2></a>
 				<div class="map-container">
 					<a href="#">Gaspar House - Zahora, Spain</a>
 					<iframe class="left map" height='300' frameBorder='0' src='http://a.tiles.mapbox.com/v3/trooz1.map-f817jt79.html#14/36.200700000000005/-6.033599999999982'></iframe>					
@@ -12,7 +18,9 @@
 				</div>             	
 			</header>
 			<section class="brief center">
-			<p>The short film <i>Autumn Rain</i> was conceived as a study in how changes in time and season dramatically affect constructed spaces. All shots were composed and rendered in 3DS Max, color-corrected in After Effects, and edited in Premiere Pro.</p>
+			<p itemprop="description">The short film <i>Autumn Rain</i> was conceived as a study in how changes in time and season dramatically affect constructed spaces. All shots were composed and rendered in 3DS Max, color-corrected in After Effects, and edited in Premiere Pro.</p>
+			<meta itemprop="duration" content="PT1M4S" />
+			<meta itemprop="thumbnail" content="{{_site_root}}assets/img/autumnrain-vidcover2.jpg" />
 			</section>
         </article>
         

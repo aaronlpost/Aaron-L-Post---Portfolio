@@ -10,14 +10,15 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
-
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link rel="shortcut icon" href="http://aaronlpost.com/favicon.ico">     
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://aaronlpost.com/assets/img/icon.png" />   
         <link rel="stylesheet" href="{{ theme:css src='main.css'}}">
-        <link rel="stylesheet" href="{{ theme:css src='oops.css'}}">
+        <link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,400italic|Vollkorn:400italic,400' rel='stylesheet' type='text/css'>
         
         <script src="{{ theme:js src='vendor/modernizr-2.6.2.min.js' }}"></script>
+		<link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+		<script src="http://vjs.zencdn.net/c/video.js"></script>
 	</head>
     <body>
         <!--[if lt IE 7]>
@@ -66,6 +67,24 @@
 			        return $(this).attr('src').replace('.svg', '.png');
 			    });
 			}
+		</script>
+		<script type="text/javascript">
+		  // Once the video is ready
+		  _V_("example_video_1").ready(function(){
+		
+		    var myPlayer = this;    // Store the video object
+		    var aspectRatio = 9/16; // Make up an aspect ratio
+		
+		    function resizeVideoJS(){
+		      // Get the parent element's actual width
+		      var width = document.getElementById(myPlayer.id).parentElement.offsetWidth;
+		      // Set width to fill parent element, Set height
+		      myPlayer.width(width).height( width * aspectRatio );
+		    }
+		
+		    resizeVideoJS(); // Initialize the function
+		    window.onresize = resizeVideoJS; // Call the function on resize
+		  });
 		</script>
     </body>
 </html>

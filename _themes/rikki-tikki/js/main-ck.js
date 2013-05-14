@@ -513,7 +513,7 @@ $("a[title]").qtip({position: {
 		target: $('.soon') 
 	}})
 $("#fitvid").fitVids();
-
+videojs.options.flash.swf="http://aaronlpost.com/_themes/rikki-tikki/js/to/video-js.swf";
 });
 
 

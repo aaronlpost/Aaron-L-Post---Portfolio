@@ -425,7 +425,7 @@ textarea {
 		display: block;
 	}
 	
-	time {
+	.time {
 	    @include breakpoint(small-desk) {display: block; float: left; &:after {content: "\2605 "; padding-left: 1em; padding-right: 1em;}; };
 	}
 	
@@ -981,14 +981,14 @@ textarea {
 		width: 100%;
 	}
 	
-	.timeline time {
+	.time {
 		font-size: 1.125em;
 		font-family: "Sorts Mill Goudy", serif;	
 		color: #7e7e7e;
 		font-style: italic;
 	}
 	
-	.timeline time::after {
+	.time::after {
 		content: none;
 	}
 
