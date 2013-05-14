@@ -23,11 +23,10 @@ $(document).ready(function(){
   $(".image-popup").magnificPopup({type:"image"});
   $(".lazy").lazyload({threshold : 200, effect : "fadeIn"});
 
+  	if ($('.baby-container').length > 0) { 
 	// Cache the Window object
-
 	var $window = $(window);
-
-      $(window).scroll(function() {
+    $(window).scroll(function() {
 		// Scroll the background at var speed
 		var babydistance = ($('.baby-container').offset().top - 100);
 		//var yPos = $window.scrollTop(), distance = $('.img-contain').offset().top;
@@ -58,6 +57,7 @@ $(document).ready(function(){
 
 
 }); // window scroll Ends
+    };
 
 jQuery.easing.def = "easeInOutCubic";
 $("#night-trigger").hover( function() { $("#night img").attr("src", $("#night img").attr("data-original")); $("#night img").removeAttr("data-original"); $("#night").fadeToggle(); } );
@@ -70,7 +70,7 @@ $("#beth-trigger").hover( function() { $("#beth img").attr("src", $("#beth img")
 $("#fred-trigger").hover( function() { $("#fred img").attr("src", $("#fred img").attr("data-original")); $("#fred img").removeAttr("data-original"); $("#fred").fadeToggle(); } );
 $("#aaron-trigger").hover( function() { $("#aaron img").attr("src", $("#aaron img").attr("data-original")); $("#aaron img").removeAttr("data-original"); $("#aaron").fadeToggle(); } );
 $(".rslides").responsiveSlides();
-$("a[title]").qtip({position: {
+$("a[title].soon").qtip({position: {
 		my: 'top center',  
 		at: 'bottom center', 
 		target: $('.soon') 
