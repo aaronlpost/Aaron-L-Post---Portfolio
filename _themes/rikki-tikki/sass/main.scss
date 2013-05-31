@@ -286,6 +286,10 @@ textarea {
 	    left:8.5%;
 	    float: left;
 	    margin: 0 !important;
+		border: 0;
+		font: 0/0 a;
+		text-shadow: none;
+		color: transparent;
     }
     
     .no-svg #logo {
@@ -493,6 +497,11 @@ textarea {
 	.center img {
 		margin-bottom: 4.5em;
 		@include breakpoint(mobile) {margin-bottom: 3em; }
+	}
+	
+	.center a {
+		display: inline;
+		margin: 0;
 	}
 		
 	.portfolio-hero {
