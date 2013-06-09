@@ -395,6 +395,18 @@ textarea {
 		z-index: 150;
 	}
 	
+.article-image::before
+{
+    display:block;
+    content:'';
+    position:absolute;
+    width:100%;
+    height:100%;
+    -moz-box-shadow:inset 0px 0px 3px 1px rgba(0,0,0,0.2);
+    -webkit-box-shadow:inset 0px 0px 3px 1px rgba(0,0,0,0.2);
+    box-shadow:inset 0px 0px 3px 1px rgba(0,0,0,0.2);
+}
+	
 	article header {
 		float: left;
 		width: 25%;
@@ -407,7 +419,7 @@ textarea {
 	article p, article figure {
 		float: right;
 		width: 50%;
-		margin-bottom: 1.55em;
+		margin-bottom: 1.5em;
 		margin-right: 8.5%;
 		@include breakpoint(small-desk) {width:70%; margin-left: 15%; margin-right: 15%; float: left; text-align: left;}
 		@include breakpoint(tablet) {width:82%; margin-left: 9%; margin-right: 9%; }	
@@ -435,7 +447,7 @@ textarea {
 	
 	.location {
 		display: block;
-	    @include breakpoint(small-desk) {float: left; margin-bottom: 1.55em; };
+	    @include breakpoint(small-desk) {float: left; margin-bottom: 1.5em; };
 	}
 	
 	.desc-header p {
@@ -476,7 +488,7 @@ textarea {
 		a {
 	    	font-family: 'Vollkorn', Georgia, serif;
 	    	display: block;
-	    	margin-bottom: 1.55em;
+	    	margin-bottom: 1.5em;
 	    	text-align: center;
 		}
 		p {
@@ -736,7 +748,7 @@ textarea {
 
 	.homepage p {
 		text-align: left;
-		margin-bottom: 1.55em;
+		margin-bottom: 1.5em;
 		-ms-word-break: break-all;
 		word-break: break-all;
 		/* Non standard for webkit */
@@ -1077,7 +1089,47 @@ textarea {
 		width: 100%;
 		border: 0;
 	}
+
+/* !Q&A
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   */
+	p.a+p.a {
+		text-indent: 2em;
+		margin-top: -1.5em;
+	}
+
+	.q {
+		font-style: italic;
+		font-size: 1.6875em;
+		margin-top: .75em;
+		margin-bottom: .95em;
+		line-height: 1.1;
+	}
+
+	.a {
+		margin-bottom: 2.25em;
+	}
+
+	.q, .a {
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+	}
 	
+	.aside {
+		padding: 8px;
+		background: #fff;
+		width: 20%;
+		margin: 0;
+		border-radius: 4px;
+		box-shadow: 0 1px 6px rgba(0,0,0,0.5);
+		font-size: .8em;
+		@include breakpoint(large-desk) {margin: -16px; }
+	}
+
+	.aside img, .aside figcaption {
+		margin-bottom: 1em;
+	}
+
 /* !Gallery
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   */
 	.gallery-home {
