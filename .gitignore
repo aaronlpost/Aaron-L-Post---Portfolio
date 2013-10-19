@@ -15,6 +15,11 @@ _themes/london-wild/
 *.ai
 *.psd
 
+## Video Files ##
+*.mp4
+*.ogv
+*.webm
+
 ## Codekit ##
 _themes/rikki-tikki/.sass-cache/
 codekit-config.json
