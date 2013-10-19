@@ -26,3 +26,5 @@ codekit-config.json
 
 ## OS Files ##
 .DS_Store
+
+*.json
