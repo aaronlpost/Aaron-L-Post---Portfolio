@@ -1,3 +1,14 @@
+/* ==========================================================================
+   Rikki Tikki
+   AaronLPost.com v1.0
+   Special Thanks To
+   		* HTML5Boilerplate and Normalize.css for a helpful foundation 
+   		* Copious amounts of coffee coffee coffee
+   		* Texas Rangers Baseball for an often-needed distraction
+   		* Most of all, my lovely girlfriend Michelle for her support
+   ========================================================================== */
+
+
 /*
  * HTML5 Boilerplate
  *
@@ -6,7 +17,7 @@
  * Kroc Camen, and the H5BP dev community and team.
  */
 
-@import 'normalize';
+@import 'normalize212';
 @import 'bourbon';
 
 @mixin breakpoint($point) {
@@ -63,19 +74,6 @@ body {
 }
 
 /*
- * A better looking default horizontal rule
- */
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px dashed #e5e5e5;
-    margin: 0;
-    padding: 0;
-}
-
-/*
  * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
  */
 
@@ -102,18 +100,7 @@ textarea {
 }
 
 /* ==========================================================================
-   Chrome Frame prompt
-   ========================================================================== */
-
-.chromeframe {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
-
-/* ==========================================================================
-   Author's custom styles
+   My Styles
    ========================================================================== */
 
 /* !Global
@@ -128,6 +115,7 @@ textarea {
 
 	img {
 		max-width: 100%;
+		height: auto;  
 	}
 
 /* !Type
@@ -182,6 +170,7 @@ textarea {
 		margin-top: 0;
 	}
 	
+	/* Header */
 	h1.page-title {
 		font-family: "Sorts Mill Goudy", serif;	
 		margin: .75em 0 .45em 0;
@@ -536,41 +525,6 @@ textarea {
 		box-shadow: inset 0px 0px 7px #000;
         @include breakpoint(mobile) {font-size: 1.5em; }
 	}
-/*
-		
-	.hero-title {
-		position: absolute;
-		z-index: 500;
-		h2 {
-			color: #fff;
-	        text-shadow: 1px 1px 3px #000;
-			line-height: 1;
-			font-size: 1.5em;
-			margin-bottom: 0;
-			font-variant: small-caps;
-			letter-spacing: 1px;
-			text-rendering: auto; 
-		}
-		p {
-			color: #000;
-			background: #fff;
-		}
-        @include breakpoint(mobile) {position: relative; display: inline-block; width: 100%; font-size: .75em; margin-bottom: .75em;}
-	}	
-	
-	.hero-section, .hero-type {
-		padding: .65em 1em;
-		position: relative;
-		float: left;
-		box-shadow: 0 2px 9px rgba(0,0,0,0.4); 
-	}
-	
-	.hero-type {
-		background-color: rgba(204,68,0,0.9);
-		border-bottom-right-radius: 6px;
-	    @include breakpoint(mobile) {background-color: rgb(204,68,0); width: 100%; padding: .65em 0; text-align: center; border-bottom-right-radius: 0;}
-	}
-*/
 	
 	.hero-title {
 		position: absolute;
@@ -980,21 +934,6 @@ textarea {
 		@include transform(rotate(-10deg));
 	}
 
-/*
-	.dots:after {
-		content: "____________";
-		position: absolute;
-		width: 100%;
-		text-align: center;
-		top: 3em;
-		font-size: 1em;
-		z-index: 10;
-		color: #fff;
-		text-shadow: 0 1px 2px rgba(184,184,184,0.7);
-		@include breakpoint(tablet) {display: none; }	
-	}
-*/
-
 	.timeline p {
 		text-align: left;
 		float: none;
@@ -1196,31 +1135,6 @@ textarea {
 		z-index:100;
 		}
 	
-/*
-	figure {
-		display:block;
-		position:relative;
-		overflow:hidden;
-		margin:0;
-		}
-	
-	figcaption {
-		position:absolute;
-		background:rgba(0, 0, 0, 0.75);
-		color:#ffffff;
-		padding:10px 20px;
-		opacity:0;
-		bottom:0;
-		left:-30%;
-		@include transition (all 0.6s ease);
-		}
-	
-	figure:hover figcaption,.visible {
-		opacity:1;
-		left:0;
-		}
-*/
-	
 /* !Footer
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   */
 	#pagination {
@@ -1277,76 +1191,62 @@ textarea {
 	 	@include breakpoint(tablet) {display: block; }
 	}
 
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
+/* !Email PopUp
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   */
+	.email-popup {
+		position: relative;
+		padding: 40px 6%;
+		width: 83%;
+		@include breakpoint(mobile) {width: 90%; }
+		max-width: 1050px;
+		margin: 20px auto -18px auto;
+		font-family: "Vollkorn", serif;
+		border-radius: 7px 7px 0 0;
+		display: none;
+		box-sizing: border-box; /* css3 rec */
+    	-moz-box-sizing: border-box; /* ff2 */
+    	-ms-box-sizing: border-box; /* ie8 */
+    	-webkit-box-sizing: border-box; /* safari3 */
+    	-khtml-box-sizing: border-box; /* konqueror */
+		background: rgb(255,255,255); /* Old browsers */
+		background: -moz-linear-gradient(top,  rgb(255,255,255) 0%, rgb(255,255,255) 99%, rgb(206,206,206) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(255,255,255)), color-stop(99%,rgb(255,255,255)), color-stop(100%,rgb(206,206,206))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  rgb(255,255,255) 0%,rgb(255,255,255) 99%,rgb(206,206,206) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  rgb(255,255,255) 0%,rgb(255,255,255) 99%,rgb(206,206,206) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  rgb(255,255,255) 0%,rgb(255,255,255) 99%,rgb(206,206,206) 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  rgb(255,255,255) 0%,rgb(255,255,255) 99%,rgb(206,206,206) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#cecece',GradientType=0 ); /* IE6-9 */
 
-/*
- * Image replacement
- */
+	}
 
-.ir {
-    background-color: transparent;
-    border: 0;
-    overflow: hidden;
-    /* IE 6/7 fallback */
-    *text-indent: -9999px;
-}
-
-.ir:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 100%;
-}
-
-/*
- * Hide from both screenreaders and browsers: h5bp.com/u
- */
-
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
-
-/*
- * Hide only visually, but have it available for screenreaders: h5bp.com/v
- */
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-/*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
- */
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-/*
- * Hide visually and from screenreaders, but maintain layout
- */
-
-.invisible {
-    visibility: hidden;
-}
-
+	input, textarea {
+		width: 100%;
+		padding: 6px;
+		margin-bottom: 1em;
+		box-sizing: border-box; /* css3 rec */
+    	-moz-box-sizing: border-box; /* ff2 */
+    	-ms-box-sizing: border-box; /* ie8 */
+    	-webkit-box-sizing: border-box; /* safari3 */
+    	-khtml-box-sizing: border-box; /* konqueror */
+	}
+	
+	#contact {
+		width: 79.5%;
+		margin-left: 21.5%;
+	}
+	
+	.hello {
+		width: 12%;
+		float: left;
+	}
+	
+	.success {
+		color: #00a607;
+	}
+	
+	.error, .errorname, .errormessage, .erroremail {
+		color: #b30000;
+	}
 /*
  * Clearfix: contain floats
  *
@@ -1450,80 +1350,6 @@ textarea {
     }
 }
 
-/*!
- * qTip2 - Pretty powerful tooltips - v2.0.1
- * http://qtip2.com
- *
- * Copyright (c) 2012 Craig Michael Thompson
- * Released under the MIT, GPL licenses
- * http://jquery.org/license
- *
- * Date: Mon Dec 31 2012 02:55 GMT+0000
- * Plugins: svg ajax tips modal viewport imagemap ie6
- * Styles: basic css3
- */
-
-/* Core qTip styles */
-.qtip, .qtip{
-	position: absolute;
-	left: -28000px;
-	top: -28000px;
-	display: none;
-
-	max-width: 280px;
-	min-width: 50px;
-	
-	font-size: 10.5px;
-	line-height: 12px;
-
-	direction: ltr;
-}
-
-	.qtip-content{
-		position: relative;
-		padding: 5px 9px;
-		overflow: hidden;
-
-		text-align: left;
-		word-wrap: break-word;
-	}
-
-/* Default tooltip style */
-.qtip-default{
-	border-radius: 5px;
-	font-family: "Vollkorn", serif;
-	font-size: .9em;
-	background-color: #000;
-	color: #fff;
-	padding: 8px;
-	border: 1px #222 solid;
-}
-
-
-/* Tips plugin */
-.qtip .qtip-tip{
-	margin: 0 auto;
-	overflow: hidden;
-	z-index: 10;
-}
-
-	.qtip .qtip-tip,
-	.qtip .qtip-tip .qtip-vml{
-		position: absolute;
-
-		color: #000;
-		background: transparent;
-		border: 0 dashed transparent;
-	}
-	
-	.qtip .qtip-tip canvas{ top: 0; left: 0; }
-
-	.qtip .qtip-tip .qtip-vml{
-		behavior: url(#default#VML);
-		display: inline-block;
-		visibility: visible;
-	}
-	
 /* Magnific Popup CSS */
 
 ////////////////////////
@@ -2101,7 +1927,4 @@ button::-moz-focus-inner {
     }
   }
 }
-
-
-
 

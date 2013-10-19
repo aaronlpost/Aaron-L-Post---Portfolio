@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Skydiving!</title>
+
+<style>
+.fadein {position: relative; margin: 0 auto; width: 800px; height: 600px;}
+.fadein img { position:absolute; left:0; top:0; }
+</style>
+
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+</head>
+<body>
+
+<div class="fadein">
+  <img src="http://farm8.staticflickr.com/7348/10253923313_8ea0732fd5_c.jpg">
+  <img src="http://farm6.staticflickr.com/5463/10253718854_a1fe53d050_c.jpg">
+  <img src="http://farm3.staticflickr.com/2816/10253920843_8f632f8aa9_c.jpg">
+  <img src="http://farm6.staticflickr.com/5520/10253817475_7b3906cb71_c.jpg">
+  <img src="http://farm8.staticflickr.com/7362/10253918143_f8a7ccd8fe_c.jpg">
+  <img src="http://farm6.staticflickr.com/5526/10253806196_0f25734825_c.jpg">
+  <img src="http://farm8.staticflickr.com/7373/10253813605_26fcd80e81_c.jpg">
+  <img src="http://farm6.staticflickr.com/5331/10253803706_96824d94e2_c.jpg">
+  <img src="http://farm6.staticflickr.com/5445/10253811365_606c8a534a_c.jpg">
+  <img src="http://farm3.staticflickr.com/2875/10253801526_f438af50ae_c.jpg">
+  <img src="http://farm4.staticflickr.com/3757/10253800216_cd2e98db70_c.jpg">
+  <img src="http://farm3.staticflickr.com/2865/10253909543_87cbbe09d3_c.jpg">
+  <img src="http://farm8.staticflickr.com/7395/10253908123_6cdcf55c96_c.jpg">
+
+
+</div>
+
+<script>
+$(function(){
+    $('.fadein img:gt(0)').hide();
+    (function looper(){
+      setTimeout(function(){
+        $('.fadein :first-child').fadeOut(1000)
+        .next('img').show()
+        .end().appendTo('.fadein');
+        if ($('.mfp-content').css('display') === 'inline-block') {
+          looper();
+        }
+        }, 
+      1000);
+    })()
+});
+
+
+</script>
+</body>
+</html>

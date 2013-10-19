@@ -1,14 +1,23 @@
-.DS_Store
-_cache/*
 .htaccess
-_config/users/admin.yaml
-_config/add-ons/*
-_add-ons/*
 
+## Statamic Files ##
+_add-ons/
+admin/
+_app/
+_cache/
+_config/
+_content/3-journal/
+_themes/london-wild/
+
+## Image Files ##
 *.jpg
-
 *.png
-
 *.ai
-
 *.psd
+
+## Codekit ##
+_themes/rikki-tikki/.sass-cache/
+codekit-config.json
+
+## OS Files ##
+.DS_Store
