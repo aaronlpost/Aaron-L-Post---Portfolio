@@ -9,12 +9,12 @@ javascripts_dir = "js"
 fonts_dir = "fonts"
 
 output_style = :compressed
+environment = :production
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
 # relative_assets = true
 
-# To disable debugging comments that display the original location of your selectors. Uncomment:
-# line_comments = false
+line_comments = false
 color_output = false
 
 
@@ -23,4 +23,3 @@ color_output = false
 # preferred_syntax = :sass
 # and then run:
 # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
-preferred_syntax = :scss
